@@ -1,0 +1,321 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@200;300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap");
+:root {
+  --primary: #1b9274;
+  --secondary: #5fb39e;
+  --specialcl: #7e8ab84e;
+  --primarybg: #ffffff;
+  --secondarybg: #fafafa;
+  --specialbg: #f5f5f5;
+  --progressbarcont: #d8d8d8;
+  --primarytext: #1d1d1d;
+  --secondarytext: #989898;
+  --simpletext: #8a8a8a;
+  --btncolor: #213430;
+  --bordercl: #dddddd;
+
+  --fontfamily: "Outfit", sans-serif;
+  --specialfont: "Rubik", sans-serif;
+}
+.Campaignbg {
+  padding: 80px 120px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-image: url(../media/map.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.Campaignbg .Campaigntext h1 {
+  font-family: var(--specialfont);
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 57px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+.Campaignbg .Campaigntext h1 span {
+  color: var(--primary);
+}
+.cardsection {
+  padding: 40px 60px;
+}
+.headflex {
+  display: flex;
+  margin-bottom: 20px;
+}
+.brr {
+  border-right: 2px solid var(--primary);
+}
+.mainheading {
+  padding: 0px 10px;
+  color: var(--primary);
+}
+
+.mainCardUpper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  column-gap: 20px;
+  row-gap: 20px;
+}
+.cardservice {
+  width: 30%;
+  border-top: 2px solid var(--secondarytext);
+  border-left: 2px solid var(--secondarytext);
+  box-shadow: 10px 10px var(--primary);
+  border-radius: 10px;
+  padding: 20px;
+}
+.logoHnd {
+  width: 18%;
+}
+
+.viewButton {
+  background-color: #1a9777;
+  color: white;
+  cursor: pointer;
+  width: 37%;
+  padding: 16px 0px;
+  border: none;
+  border-radius: 10px 10px 0px 10px;
+}
+.title {
+  margin-top: 10px;
+  margin-bottom: 0px;
+}
+
+.buttonupper {
+  display: flex;
+  justify-content: end;
+}
+
+.cardPera {
+  font-size: 14px;
+  font-weight: 500;
+  font-family: var(--fontfamily);
+  line-height: 24px;
+  margin-top: 11px;
+}
+
+.colorBox {
+  background-color: #1a9777;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+}
+.aboutmainlayyer {
+    padding: 0px 40px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+  }
+  
+  .leftSide {
+    padding: 30px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .innerleft {
+    display: flex;
+    justify-content: center;
+    margin-top: 6rem;
+  }
+  
+  .rightSide {
+    padding: 30px;
+    width: 100%;
+  }
+  
+  .firstpic {
+    position: absolute;
+    width: 15%;
+    left: 9rem;
+    top: 2rem;
+  }
+  
+  .thirdpic {
+    position: absolute;
+    width: 15%;
+    top: 16rem;
+    left: 393px;
+  }
+  
+  .secondpic {
+    width: 70%;
+  }
+  
+  .aboutTitle {
+    color: #1a9777;
+  }
+  
+  .donationAmouts {
+    padding: 19px 0px;
+    border: 4px solid var(--primary);
+    display: flex;
+    justify-content: space-around;
+    margin-top: 26px;
+  }
+  
+  .donateAmounT {
+    margin-top: 0px;
+    margin-bottom: 0px;
+  }
+  .donateTitle {
+    margin-bottom: 8px;
+    margin-top: 0px;
+  }
+  
+  .vl {
+    border-left: 2px solid var(--primary);
+    height: 60px;
+  }
+  
+  .donatebutton {
+    background-color: #1a9777;
+    color: white;
+    cursor: pointer;
+    width: 22%;
+    padding: 15px 0px;
+    border: none;
+    border-radius: 10px 10px 0px 10px;
+  }
+  .donatebuttonUpper {
+    margin-top: 25px;
+  }
+  
+  @media screen and (max-width: 600px) {
+    .aboutmainlayyer {
+      padding: 0px 40px;
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      gap: 10px;
+    }
+  
+    .innerleft {
+      display: flex;
+      justify-content: center;
+      margin-top: 3rem;
+    }
+  
+    .firstpic {
+      position: absolute;
+      width: 37%;
+      left: 4rem;
+      top: 2rem;
+    }
+  
+    .thirdpic {
+      position: absolute;
+      width: 37%;
+      top: 12rem;
+      left: 259px;
+    }
+  
+    .donatebutton {
+      width: 40%;
+      padding: 17px 0px;
+    }
+  }
+  
+  @media (min-width: 602px) and (max-width: 768px) {
+    .aboutmainlayyer {
+      padding: 0px 40px;
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      gap: 10px;
+    }
+  
+    .innerleft {
+      display: flex;
+      justify-content: center;
+      margin-top: 3rem;
+    }
+  
+    .firstpic {
+      position: absolute;
+      width: 29%;
+      left: 11rem;
+      top: 2rem;
+    }
+  
+    .thirdpic {
+      position: absolute;
+      width: 29%;
+      top: 12rem;
+      left: 431px;
+    }
+    .secondpic {
+      width: 70%;
+    }
+  
+    .leftSide {
+      padding: 20px;
+    }
+    .rightSide {
+      padding: 19px;
+      margin-top: 3rem;
+    }
+  }
+  
+  @media (min-width: 770px) and (max-width: 1024px) {
+    .aboutmainlayyer {
+      padding: 0px 40px;
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+    }
+  
+    .innerleft {
+      display: flex;
+      justify-content: center;
+      margin-top: 3rem;
+    }
+  
+    .firstpic {
+      position: absolute;
+      width: 20%;
+      left: 55px;
+      top: 6rem;
+    }
+  
+    .thirdpic {
+      position: absolute;
+      width: 20%;
+      top: 20rem;
+      left: 297px;
+    }
+    .secondpic {
+      width: 55%;
+    }
+  
+    .leftSide {
+      padding: 20px;
+    }
+    .rightSide {
+      padding: 19px;
+      margin-top: 9rem;
+    }
+  }
+  
+@media screen and (min-width: 768px) {
+  .Campaignbg {
+    padding: 80px 30px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .Campaignbg {
+    padding: 80px 40px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .Campaignbg {
+    padding: 80px 120px;
+  }
+}

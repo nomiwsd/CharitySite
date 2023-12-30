@@ -1,0 +1,195 @@
+@import url("https://fonts.googleapis.com/css2?family=Sora:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@200;300&display=swap");
+:root {
+  --primary: #1b9274;
+  --secondary: #5fb39e;
+  --specialcl: #7e8ab84e;
+  --primarybg: #ffffff;
+  --secondarybg: #f2f2f2;
+  --specialbg: #f5f5f5;
+  --progressbarcont: #d8d8d8;
+  --primarytext: #1d1d1d;
+  --secondarytext: #989898;
+  --simpletext: #8a8a8a;
+  --btncolor: #213430;
+  --bordercl: #dddddd;
+
+  --fontfamily: "Outfit", sans-serif;
+  --specialfont: "Rubik", sans-serif;
+}
+.contactus {
+  padding: 80px 120px;
+  display: flex;
+  justify-content: space-between;
+}
+.contactus_div {
+  padding: 0px 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 10px;
+}
+.contactpart {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  justify-content: center;
+}
+.contactpart .iconmsg {
+  background-color: var(--secondarybg);
+  padding: 20px;
+}
+.iconmsg svg {
+  font-size: 20px;
+  color: var(--primary);
+}
+.contactpart {
+  margin-top: 20px;
+}
+.text_part h4 {
+  font-size: 20px;
+  font-weight: 800;
+  font-family: var(--fontfamily);
+  line-height: 22px;
+  color: var(--primarytext);
+}
+.text_part p {
+  font-size: 20px;
+  font-weight: 400;
+  font-family: var(--fontfamily);
+  line-height: 22px;
+  color: #727272;
+}
+.contactpart .text_part {
+  display: flex;
+  flex-direction: column;
+}
+.cardsdiv {
+  display: flex;
+  z-index: 20 !important;
+}
+.cardsect {
+  padding: 80px 60px;
+  position: relative;
+  overflow: hidden;
+}
+.cards_div .quotes {
+  font-family: "Sora", sans-serif;
+  font-size: 80px;
+  font-weight: 600;
+  line-height: 80px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: var(--primary);
+}
+.cards_div .cardtext_head {
+  font-family: "Sora", sans-serif;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 35px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: var(--primarytext);
+}
+.cards_div .cardtext_para {
+  margin-bottom: 30px;
+  font-family: "Work Sans", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: #454545;
+}
+
+.cards_div {
+  background-color: #ffffff;
+  z-index: 9999 !important;
+  padding: 10px;
+  border: 1px solid #00725e;
+}
+.mainflex .flex_part h4 {
+  font-family: "Sora", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 36px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: #454545;
+}
+.mainflex .flex_part p {
+  font-family: "Work Sans", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: #454545;
+}
+.mainflex .flex_part {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0px;
+}
+.padd {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+@media screen and (min-width: 768px) {
+  .cardsdiv {
+    gap: 10px;
+  }
+  .contactus {
+    padding: 80px 40px;
+  }
+  .cardsect {
+    padding: 80px 30px;
+  }
+  .mainflex {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .cardsdiv {
+    gap: 20px;
+  }
+  .contactus {
+    padding: 80px 80px;
+  }
+  .mainflex {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    gap: 10px;
+  }
+  .cardsect {
+    padding: 80px 40px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .cardsdiv {
+    gap: 30px;
+  }
+  .contactus {
+    padding: 80px 120px;
+  }
+  .mainflex {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    gap: 10px;
+  }
+
+  .cardsect {
+    padding: 80px 60px;
+  }
+}

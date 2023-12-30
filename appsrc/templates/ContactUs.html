@@ -1,0 +1,236 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      href="{% static 'fontawesomefree/css/all.min.css' %}"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link rel="stylesheet" href="{% static '/css/hompage.css' %}" />
+
+    <link rel="stylesheet" href="{% static '/css/contactus.css' %}" />
+
+    <!-- One file includes all the Font Awesome Free icons and utilities -->
+    <script src="{% static 'fontawesomefree/js/all.min.js' %}"></script>
+  </head>
+  <body>
+    <header>
+      <div class="topdiv">
+        <div class="address">
+          <span
+            ><i class="fa-solid fa-phone"></i>
+            <p>+00000000000</p></span
+          >
+          <span
+            ><i class="fa-regular fa-envelope"></i>
+            <p>info@******.com</p></span
+          >
+        </div>
+        <div class="sociallinks">
+          <a href=""><i class="fa-brands fa-twitter"></i></a>
+          <a href=""><i class="fa-brands fa-instagram"></i></a>
+          <a href=""><i class="fa-brands fa-facebook"></i></a>
+          <a href=""><i class="fa-brands fa-youtube"></i></a>
+        </div>
+      </div>
+      <nav>
+        <p>Logo</p>
+        <ul>
+          <li>
+            <div class="dropdown">
+              <!-- Button that triggers the dropdown -->
+              <button>
+                Who We are <i class="fa-solid fa-chevron-down"></i>
+              </button>
+              <!-- Dropdown content -->
+              <div class="dropdown-content">
+                <!-- Dropdown items -->
+                <a href="#">Item 1</a>
+                <a href="#">Item 2</a>
+                <a href="#">Item 3</a>
+              </div>
+            </div>
+          </li>
+          <li><a href="{% url 'ourcompaign' %}">Our Campaign</a></li>
+          <li><a href="{% url 'news' %}">News</a></li>
+          <li><a href="{% url 'contactus' %}">Contact Us</a></li>
+          <li>
+            <button class="navbtn">
+              Donate Now <i class="fa-solid fa-heart"></i>
+            </button>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <section class="contactus">
+        <div>
+          <img src="../../static/media/pana.png" alt="" />
+        </div>
+        <div class="contactus_div">
+          <div class="padd">
+            <h1 class="mainhead_2">Get in Touch With Us</h1>
+            <p class="simple_text">
+              Lorem Ipsum is simply dummy text of the printin typesetting dummy
+              text ever when an unknown printer took a galley of type and
+              scrambled it to make a type specimen book.
+            </p>
+          </div>
+          <div class="contactpart">
+            <div class="iconmsg"><i class="fa-regular fa-envelope"></i></div>
+            <div class="text_part">
+              <h4>Message</h4>
+              <p>support@*****.com</p>
+            </div>
+          </div>
+          <div class="contactpart">
+            <div class="iconmsg"><i class="fa-solid fa-phone"></i></div>
+            <div class="text_part">
+              <h4>Contact Us</h4>
+              <p>+01 0000000000</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="cardsect">
+        <div class="right_img"></div>
+        <div class="left_img"></div>
+        <div class="">
+          <div class="leftdiv">
+            <p class="importanttext gp">Tetimonial</p>
+            <h1 class="mainhead_3">What People Say About Us</h1>
+          </div>
+          <div class="cardsdiv">
+            <div class="cards_div">
+              <p class="quotes">“</p>
+              <h4 class="cardtext_head">Kindness</h4>
+              <p class="cardtext_para">
+                Lorem Ipsum is simply dummy text Lorem Ipsum is simply dummy
+                text Lorem Ipsum is simply dummy text Lorem Ipsum is simply
+                dummy text Lorem Ipsum is
+              </p>
+              <div class="mainflex">
+                <div>
+                  <img src="../../static/media/Ellipse 25.png" alt="" />
+                </div>
+                <div class="flex_part">
+                  <h4>Bashir Muhammad</h4>
+                  <p>Senior Gardener Farmer</p>
+                </div>
+              </div>
+            </div>
+            <div class="cards_div">
+              <p class="quotes">“</p>
+              <h4 class="cardtext_head">Humanity</h4>
+              <p class="cardtext_para">
+                Lorem Ipsum is simply dummy text Lorem Ipsum is simply dummy
+                text Lorem Ipsum is simply dummy text Lorem Ipsum is simply
+                dummy text Lorem Ipsum is
+              </p>
+              <div class="mainflex">
+                <div>
+                  <img src="../../static/media/Ellipse 25.png" alt="" />
+                </div>
+                <div class="flex_part">
+                  <h4>Bashir Muhammad</h4>
+                  <p>Senior Gardener Farmer</p>
+                </div>
+              </div>
+            </div>
+            <div class="cards_div">
+              <p class="quotes">“</p>
+              <h4 class="cardtext_head">Ethics & Morality</h4>
+              <p class="cardtext_para">
+                Lorem Ipsum is simply dummy text Lorem Ipsum is simply dummy
+                text Lorem Ipsum is simply dummy text Lorem Ipsum is simply
+                dummy text Lorem Ipsum is
+              </p>
+              <div class="mainflex">
+                <div>
+                  <img src="../../static/media/Ellipse 25.png" alt="" />
+                </div>
+                <div class="flex_part">
+                  <h4>Bashir Muhammad</h4>
+                  <p>Senior Gardener Farmer</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <div class="footer_main">
+        <div class="logo_div">
+          <h2>Logo</h2>
+          <p>
+            Whatever it is that you care about, there will be a charity working
+            on it. Charities help in lots of different ways
+          </p>
+          <div class="sociallinks">
+            <a href=""><i class="fa-brands fa-twitter"></i></a>
+            <a href=""><i class="fa-brands fa-instagram"></i></a>
+            <a href=""><i class="fa-brands fa-facebook"></i></a>
+            <a href=""><i class="fa-brands fa-youtube"></i></a>
+          </div>
+        </div>
+        <div class="footer_links">
+          <h2>Menu</h2>
+          <div class="footer_linkss">
+            <a href="">Donations</a>
+            <a href="">Features</a>
+            <a href="">Categories</a>
+            <a href="">Volunteer</a>
+            <a href="">About Us</a>
+          </div>
+        </div>
+        <div class="footer_links">
+          <h2>About Us</h2>
+          <div class="footer_linkss">
+            <a href="">How it Works?</a>
+            <a href="">Contact Us</a>
+            <a href="">FAQ</a>
+            <a href="">Help</a>
+          </div>
+        </div>
+        <div class="contactinfo_div">
+          <h2>Contact Info</h2>
+          <div class="contact_info">
+            <div class="bggreen">
+              <i class="fa-solid fa-phone"></i>
+            </div>
+            <div class="text_info">
+              <p class="bold_text">Call Us</p>
+              <p class="simple_text">+1-0000000000</p>
+            </div>
+          </div>
+          <div class="contact_info">
+            <div class="bggreen">
+              <i class="fa-solid fa-envelope"></i>
+            </div>
+            <div class="text_info">
+              <p class="bold_text">Mail Us</p>
+              <p class="simple_text">info@******.com</p>
+            </div>
+          </div>
+          <div class="contact_info">
+            <div class="bggreen">
+              <i class="fa-solid fa-location-dot"></i>
+            </div>
+            <div class="text_info">
+              <p class="bold_text">Visit us</p>
+              <p class="simple_text">Your Address here</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="copyright">
+        <p>Name © 2023 Inc. All Rights Reserved.</p>
+      </div>
+    </footer>
+  </body>
+</html>
