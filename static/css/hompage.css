@@ -1,804 +1,48 @@
-@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@200;300&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@600&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap");
-:root {
-  --primary: #1b9274;
-  --secondary: #5fb39e;
-  --specialcl: #7e8ab84e;
-  --primarybg: #ffffff;
-  --secondarybg: #fafafa;
-  --specialbg: #f5f5f5;
-  --progressbarcont: #d8d8d8;
-  --primarytext: #1d1d1d;
-  --secondarytext: #989898;
-  --simpletext: #8a8a8a;
-  --btncolor: #213430;
-  --bordercl: #dddddd;
-
-  --fontfamily: "Outfit", sans-serif;
-  --specialfont: "Rubik", sans-serif;
-}
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-.topdiv {
-  padding: 15px 90px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: var(--primary);
-  color: white;
-}
-.topdiv .address {
-  display: flex;
-  justify-content: center;
-  gap: 15px;
-}
-.address span {
-  display: flex;
-  gap: 5px;
-}
-.topdiv .sociallinks {
-  display: flex;
-  justify-content: center;
-  gap: 15px;
-}
-
-.sociallinks a {
-  text-decoration: none;
-  color: white;
-}
-nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-nav p {
-  font-size: 24px;
-  font-weight: 600;
-  font-family: var(--fontfamily);
-  color: var(--primary);
-}
-nav ul,
-nav ul li,
-nav ul li a {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 20px;
-  text-decoration: none;
-  color: var(--primary);
-  list-style: none;
-  font-size: 18px;
-  font-weight: 400;
-  font-family: var(--fontfamily);
-  cursor: pointer;
-}
-nav ul li .navbtn {
-  padding: 10px 20px;
-  font-size: 16px;
-  font-weight: 400;
-  color: var(--primary);
-  font-family: var(--fontfamily);
-  border-radius: 5px;
-  border: 1px solid var(--primary);
-  background-color: transparent;
-}
-.dropdown {
-  position: relative;
-  display: inline-block;
-}
-.dropdown button {
-  font-size: 18px;
-  font-weight: 400;
-  font-family: var(--fontfamily);
-  background-color: transparent;
-  color: var(--primary);
-  border: none;
-  cursor: pointer;
-}
-.dropdown-content {
-  display: none;
-  width: 150px;
-  position: absolute;
-  background-color: #f9f9f9;
-  color: var(--primary);
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-  z-index: 30;
-}
-.dropdown-content a {
-  color: var(--primary);
-  padding: 12px 16px;
-  display: block;
-  text-decoration: none;
-}
-.dropdown-content a:hover {
-  background-color: #ddd;
-}
-.dropdown:hover .dropdown-content {
-  display: block;
-}
-/* Landing Section */
-.landingsection {
-  background-image: url(../media/map.png);
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-.landingdiv {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.leftdiv .innerdiv {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
-  gap: 15px;
-  margin-bottom: 25px;
-}
-.importanttext {
-  font-size: 16px;
-  font-family: var(--fontfamily);
-  color: var(--primary);
-  font-weight: 600;
-  line-height: 20px;
-}
-.innerdiv .mainhead {
-  color: var(--primarytext);
-  font-size: 48px;
-  font-family: var(--specialfont);
-  font-weight: 500;
-  line-height: 56px;
-}
-.innerdiv .mainhead span {
-  color: var(--primary);
-}
-.simpletext {
-  font-size: 14px;
-  font-family: var(--fontfamily);
-  font-weight: 400;
-  line-height: 24px;
-  margin-bottom: 10px;
-  color: #989898;
-}
-.herobtn {
-  border: none;
-  border-radius: 10px 10px 0px 10px;
-  background-color: var(--primary);
-  color: white;
-  font-size: 16px;
-  font-family: var(--fontfamily);
-  font-weight: 500;
-  padding: 20px 40px 20px 40px;
-}
-
-.rightdiv .card {
-  background-color: var(--primarybg);
-  position: relative;
-  box-shadow: 0px 10px 25px 0px #21343014;
-  border-radius: 10px;
-  z-index: 10;
-}
-.rightdiv .card .icons {
-  position: absolute;
-  right: -40px;
-  top: -40px;
-}
-.mainbtn {
-  border: none;
-  border-radius: 10px 10px 0px 10px;
-  background-color: var(--primary);
-  color: white;
-  font-size: 16px;
-  font-family: var(--fontfamily);
-  font-weight: 500;
-  padding: 10px 20px;
-  margin-bottom: 15px;
-}
-.textdiv {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 5px;
-}
-.mainhead_2 {
-  color: var(--btncolor);
-  font-size: 27px;
-  font-family: var(--fontfamily);
-  font-weight: 600;
-  line-height: 32px;
-}
-
-.content .progressbardiv {
-  margin-top: 10px;
-  padding: 0px 15px;
-  background: var(--specialbg);
-  width: 100%;
-  height: 100px;
-  display: flex;
-  flex-direction: column;
-  justify-content: start;
-  align-items: center;
-}
-.progress-container {
-  width: 100%;
-  background-color: #d8d8d8;
-  height: 10px;
-  border-radius: 5px;
-  overflow: hidden;
-}
-.progress-bar {
-  width: 0;
-  height: 10px;
-  background-color: var(--primary);
-  border-radius: 5px;
-  transition: width 0.5s ease-in-out;
-}
-.progress-value {
-  text-align: center;
-  line-height: 30px;
-  color: var(--primarytext);
-  font-weight: bold;
-}
-.progressbardiv .progresstext {
-  padding: 10px 0px;
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-}
-.progresstext p {
-  font-size: 14px;
-  font-family: var(--fontfamily);
-  font-weight: 600;
-  line-height: 20px;
-}
-.progresstext p span {
-  color: #6f7775;
-  font-size: 14px;
-  font-family: var(--fontfamily);
-  font-weight: 400;
-  line-height: 20px;
-}
-.content .btndiv {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-}
-.btndiv .paybtn {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 5px;
-  background-color: white;
-  color: var(--btncolor);
-  font-size: 16px;
-  font-weight: 600;
-  font-family: var(--fontfamily);
-  line-height: 22px;
-  border: 1px solid var(--bordercl);
-  text-align: center;
-  margin-top: 10px;
-  padding: 10px 65px;
-  border-radius: 10px 10px 0px 10px;
-}
-/* Who We Are Section */
-
-.mainhead_3 {
-  color: var(--btncolor);
-  font-size: 40px;
-  font-family: var(--fontfamily);
-  font-weight: 600;
-  line-height: 46px;
-}
-.listpart p {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  font-size: 18px;
-  font-weight: 600;
-  font-family: var(--fontfamily);
-  line-height: 26px;
-}
-.fa-circle-check {
-  background-color: white;
-  color: var(--primary);
-}
-
-/* Our Campaign Section */
-
-.ourcampaign {
-  background-color: var(--secondarybg);
-}
-.cardsdiv {
-  display: flex;
-  justify-content: space-between;
-  margin: 20px 0px;
-  padding: 0;
-}
-.cardcampaign {
-  width: 33.3%;
-  display: flex;
-  flex-direction: column;
-  padding: 10px;
-  background-color: var(--primarybg);
-  border-radius: 22px;
-}
-.cardcampaign img {
-  width: auto;
-  height: 200px;
-  margin-bottom: 10px;
-}
-.cardinnerdiv {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 10px;
-}
-.cardtext {
-  font-size: 22px;
-  font-weight: 500;
-  font-family: var(--fontfamily);
-  line-height: 28px;
-  color: var(--primarytext);
-}
-.cardinnerdiv .progressbartext {
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-.progressbar .boldtext {
-  font-size: 20px;
-  font-weight: 500;
-  font-family: var(--fontfamily);
-  line-height: 26px;
-  color: var(--primarytext);
-}
-.progressbar .simpletext {
-  font-size: 18px;
-  font-weight: 400;
-  font-family: var(--fontfamily);
-  line-height: 22px;
-  color: var(--simpletext);
-}
-
-.buttondiv .mainbtn {
-  border: none;
-  border-radius: 10px 10px 0px 10px;
-  background-color: var(--primary);
-  color: white;
-  font-size: 16px;
-  font-family: var(--fontfamily);
-  font-weight: 500;
-}
-.buttondiv .simplebtn {
-  border: none;
-  background-color: white;
-  color: var(--primary);
-  font-size: 16px;
-  font-family: var(--fontfamily);
-  font-weight: 600;
-}
-.gp {
-  padding-bottom: 20px;
-}
-
-/* Latest News Section */
-
-.latestnews {
-  background-color: #ffffff;
-  position: relative;
-}
-.newstextdiv {
-  display: flex;
-  padding: 20px 0px;
-  gap: 15px;
-  justify-content: space-between;
-}
-.flexsect button {
-  border: 1px solid var(--specialcl);
-  color: var(--specialcl);
-  background-color: white;
-  padding: 5px 30px;
-  border-radius: 20px;
-}
-.maincarddiv {
-  display: flex;
-  justify-content: space-between;
-  gap: 20px;
-  margin-bottom: 20px;
-}
-.cardnews {
-  width: 33.3%;
-  display: flex;
-  flex-direction: column;
-  background-color: var(--secondarybg);
-  border-radius: 22px;
-}
-.cardnews .newsimgdiv {
-  position: relative;
-  z-index: 0;
-}
-.cardnews .newsimgdiv button {
-  position: absolute;
-  left: 20px;
-  top: 20px;
-  z-index: 5;
-  border: none;
-  border-radius: 10px 10px 0px 10px;
-  background-color: var(--primary);
-  color: white;
-  font-size: 16px;
-  font-family: var(--fontfamily);
-  font-weight: 500;
-  padding: 5px 15px;
-}
-.cardnews .newsimgdiv img {
-  width: 100%;
-  height: 200px;
-}
-.textnewsdiv {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  padding: 20px;
-}
-.textnewsdiv h2 {
-  font-size: 24px;
-  font-weight: 600;
-  font-family: var(--fontfamily);
-  line-height: 30px;
-  color: var(--primarytext);
-}
-.textnewsdiv .progress-container {
-  width: 100%;
-  background-color: var(--progressbarcont);
-  height: 4px;
-  border-radius: 5px;
-  overflow: hidden;
-}
-
-/* Style the progress bar */
-.textnewsdiv .progress-container .progress-bar {
-  width: 0;
-  height: 4px;
-  background-color: #333333;
-  border-radius: 5px;
-  transition: width 0.5s ease-in-out;
-}
-.textnewsdiv p {
-  font-size: 18px;
-  font-weight: 600;
-  font-family: var(--fontfamily);
-  line-height: 22px;
-  color: var(--primarytext);
-}
-.emailsect {
-  background-color: #fafafa;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 20px;
-  border-radius: 10px;
-}
-.emailtext h2 {
-  font-family: var(--fontfamily);
-  font-size: 40px;
-  font-weight: 600;
-  line-height: 48px;
-  letter-spacing: -1px;
-  text-align: left;
-  color: #1d1d1d;
-}
-.emailtext p {
-  color: #40404080;
-  font-family: var(--fontfamily);
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 32px;
-  letter-spacing: 0px;
-  text-align: left;
-}
-.inputsect {
-  padding: 20px;
-  display: flex;
-  gap: 10px;
-}
-.inputsect input {
-  padding: 0px 10px;
-  width: auto;
-  border-radius: 8px;
-  border: 1px solid #dadada;
-  background-color: #ffffff;
-}
-.inputsect button {
-  border: none;
-  border-radius: 10px 10px 0px 10px;
-  background-color: var(--primary);
-  color: white;
-  font-size: 16px;
-  font-family: var(--fontfamily);
-  font-weight: 500;
-  padding: 10px 20px;
-}
-/* Testimonial Section */
-.testimonialsection {
-  background-color: var(--secondarybg);
-  position: relative;
-  overflow: hidden;
-}
-
-.testimonialmaindiv {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 20px;
-}
-.testimonialimgdiv {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 0;
-  padding: 0;
-  width: 45%;
-  position: relative;
-  z-index: 0 !important;
-}
-
-.testimonialtextdiv {
-  color: #1d1d1d;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 15px;
-  width: 55%;
-  position: relative;
-  z-index: 99999;
-}
-.testimonialtextdiv h1 span {
-  color: var(--primary);
-}
-
-.testimonialtextdiv .authorname {
-  font-family: var(--fontfamily);
-  font-size: 24px;
-  font-weight: 500;
-  line-height: 30px;
-  letter-spacing: 0em;
-  text-align: left;
-  color: #232323;
-}
-.testimonialtextdiv .designation {
-  font-family: var(--fontfamily);
-  font-size: 16px;
-  font-weight: 500;
-  line-height: 20px;
-  letter-spacing: 0em;
-  text-align: left;
-  color: #696969;
-}
 
 /* Responsiveness */
-@media only screen and (min-width: 600px) {
-  nav {
-    padding: 20px 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  .landingsection {
-    padding: 40px 20px;
-  }
-
-  .landingdiv {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-}
-@media only screen and (min-width: 768px) {
-  nav {
-    padding: 20px 40px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  .landingsection {
-    padding: 40px 40px;
-  }
-
-  .landingdiv {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    gap: 50px;
-  }
-
-  .leftdiv {
-    position: relative;
-    width: 100%;
-  }
-  .rightdiv {
-    position: relative;
-    width: 100%;
+@media only screen and (max-width: 600px) {
+  .right_div {
     display: flex;
     justify-content: center;
-    align-items: center;
-  }
-  .rightdiv .card {
-    background-color: var(--primarybg);
-    position: relative;
-    width: 440px;
-    height: 420px;
-    box-shadow: 0px 10px 25px 0px #21343014;
-    border-radius: 10px;
-    padding: 30px 40px;
-    z-index: 10;
   }
   .rightdiv .card .icons {
+    width: 15vh;
+    height: 15vh;
     position: absolute;
-    right: -40px;
-    top: -40px;
+    right: -30px;
+    top: -30px;
   }
 
   .rightdiv .bgbox1 {
-    background-color: var(--primary);
-    position: absolute;
-    width: 200px;
-    height: 320px;
-    top: -15px;
-    left: 110px;
-    border-radius: 10px;
-    z-index: 5;
+    display: none;
   }
   .rightdiv .bgbox2 {
-    background-color: var(--primary);
-    position: absolute;
-    width: 200px;
-    height: 320px;
-    bottom: -15px;
-    right: 110px;
-    border-radius: 10px;
-    z-index: 5;
+    display: none;
   }
-  .btndiv .paybtn {
-    gap: 10px;
-    padding: 10px 50px;
-  }
-
-  .Whowearesection {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 80px 40px;
-  }
-  .left_div {
-    position: relative;
-  }
-  .left_div .iconimg {
-    position: absolute;
-    top: 45px;
-    left: -45px;
-    z-index: 10;
-  }
-  .left_div .overlay {
-    position: relative;
-  }
-  .left_div .overlay .bgimg {
-    width: 100%;
-    height: auto;
-    z-index: 1;
-  }
-  .left_div .overlay .frontimg {
-    width: 150px;
-    border-radius: 10px;
-    position: absolute;
-    bottom: -25px;
-    right: -40px;
-    z-index: 5;
-  }
-  .right_div {
-    width: 100%;
-    padding: 0px 10px;
-  }
-
-  /* Our Campaign Section */
-
-  .ourcampaign {
+  .footer_main {
+    padding: 40px 20px;
+    background-color: var(--secondarybg);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    padding: 40px 40px;
   }
-  .cardsdiv {
-    gap: 10px;
-  }
-  .cardinnerdiv {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-  }
-  .cardtext {
-    height: 90px;
-  }
-  .buttondiv {
-    gap: 10px;
-  }
-  .buttondiv .mainbtn {
-    padding: 5px 5px;
-  }
-  .buttondiv .simplebtn {
-    padding: 5px 5px;
-  }
-  .latestnews {
-    padding: 80px 40px;
-  }
-  .testimonialsection {
-    padding: 250px 40px;
-  }
-  .testimonialmaindiv {
-    padding: 0px 20px;
-  }
-  .testimonialimgdiv {
-    width: 50%;
-  }
-  .testimonialtextdiv {
-    width: 45%;
-    gap: 10px;
-  }
-  .bgimgrect {
+
+  .logo_div {
     width: 100%;
-    height: 510px;
   }
-  .mainimg {
-    width: 300px;
-    height: 550px;
-    background-image: url(../media/Layer2.png);
-    background-repeat: no-repeat;
-    background-size: 300px 550px;
-    position: absolute;
-    z-index: 999999 !important;
-    top: 224px;
-    left: 4.9rem;
+  .footer_links {
+    width: 100%;
   }
-  .mainhead_3 {
-    font-size: 30px;
+  .contactinfo_div {
+    width: 100%;
   }
-  .right_img {
-    position: absolute;
-    right: -10%;
-    top: 35% !important;
-    width: 200px;
-    height: 250px;
-    background-image: url(../media/Group\ 8.png);
-    background-repeat: no-repeat;
-    background-size: 200px 250px;
-    z-index: 0;
+  .footer_main {
+    background-color: var(--secondarybg);
+    display: flex;
+    gap: 20px;
   }
-  .left_img {
-    position: absolute;
-    left: -5%;
-    bottom: 15% !important;
-    width: 200px;
-    height: 250px;
-    background-image: url(../media/Group\ 10.png);
-    background-repeat: no-repeat;
-    background-size: 200px 250px;
-    z-index: 0;
-    padding-bottom: 10rem;
-  }
+}
+@media only screen and (min-width: 768px) {
   .countersection {
     padding: 30px 40px;
   }
@@ -809,6 +53,7 @@ nav ul li .navbtn {
     padding: 80px 40px;
     background-color: var(--secondarybg);
     display: flex;
+    flex-direction: row;
     justify-content: space-between;
   }
 
@@ -1049,7 +294,7 @@ nav ul li .navbtn {
     width: 200px;
     height: 320px;
     bottom: -15px;
-    right: 175px;
+    right: 177px;
     border-radius: 10px;
     z-index: 5;
   }
@@ -1095,6 +340,10 @@ nav ul li .navbtn {
     padding: 50px 100px;
   }
 
+  .footer_links {
+    width: 16.65%;
+  }
+
   .NeedHelpsect {
     padding: 100px;
   }
@@ -1105,6 +354,9 @@ nav ul li .navbtn {
 @media screen and (min-width: 1440px) {
   nav {
     padding: 20px 120px;
+  }
+  .footer_links {
+    width: 16.65%;
   }
   .landingsection {
     padding: 80px 120px;
@@ -1482,11 +734,8 @@ nav ul li .navbtn {
   text-decoration: none;
   color: var(--primary);
 }
-.footer_links {
-  width: 16.65%;
-}
-
-.footer_links h2 ,.contactinfo_div h2{
+.footer_links h2,
+.contactinfo_div h2 {
   font-family: var(--fontfamily);
   font-size: 25px;
   font-weight: 600;

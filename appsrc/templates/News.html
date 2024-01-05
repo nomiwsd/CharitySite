@@ -39,49 +39,69 @@
       </div>
       <nav>
         <p>Logo</p>
-        <ul>
-          <li>
-            <div class="dropdown">
-              <!-- Button that triggers the dropdown -->
-              <button>
-                Who We are <i class="fa-solid fa-chevron-down"></i>
-              </button>
-              <!-- Dropdown content -->
-              <div class="dropdown-content">
-                <!-- Dropdown items -->
-                <a href="#">Item 1</a>
-                <a href="#">Item 2</a>
-                <a href="#">Item 3</a>
-              </div>
+        <div class="navbar">
+          <!-- Close button added to the menu -->
+          <div class="navflex">
+            <p>Logo</p>
+            <div class="close-btn" onclick="toggleMenu()">
+              <i class="fa-solid fa-close"></i>
             </div>
-          </li>
-          <li><a href="{% url 'ourcompaign' %}">Our Campaign</a></li>
-          <li><a href="{% url 'news' %}">News</a></li>
-          <li><a href="{% url 'contactus' %}">Contact Us</a></li>
-          <li>
-            <button class="navbtn">
-              Donate Now <i class="fa-solid fa-heart"></i>
-            </button>
-          </li>
-        </ul>
+          </div>
+
+          <ul class="nav-list">
+            <li >
+              <div class="accordion_menu">
+                <button class="accordion-btn">
+                  Who We are <i class="fa-solid fa-chevron-down"></i>
+                </button>
+                <div class="accordion-content">
+                  <a href="#">Item 1</a>
+                  <a href="#">Item 2</a>
+                  <a href="#">Item 3</a>
+                </div>
+  
+              </div>
+              
+              <div class="dropdown">
+                <button>
+                  Who We are <i class="fa-solid fa-chevron-down"></i>
+                </button>
+                <div class="dropdown-content">
+                  <a href="#">Item 1</a>
+                  <a href="#">Item 2</a>
+                  <a href="#">Item 3</a>
+                </div>
+              </div>
+            </li>
+            <li><a href="{% url 'ourcompaign' %}">Our Campaign</a></li>
+            <li><a href="{% url 'news' %}">News</a></li>
+            <li><a href="{% url 'contactus' %}">Contact Us</a></li>
+            <li>
+              <button class="navbtn">
+                Donate Now <i class="fa-solid fa-heart"></i>
+              </button>
+            </li>
+          </ul>
+        </div>
+        <div class="menu-toggle">&#9776;</div>
       </nav>
     </header>
     <main>
-      <section class="hero_section">
+       <section class="hero_section">
         <div class="headflex">
           <h2 class="mainheading brr">Zakah and Sadaqah Services</h2>
           <h2 class="mainheading">Donate</h2>
         </div>
         <div class="main_hero">
-          <div><img src="../../static/media/Rectangle 64.png" alt="" /></div>
-          <div>
+          <div class="img_div"><img src="../../static/media/Rectangle 64.png" alt="" /></div>
+          <div class="btnwrap">
             <h2 class="hero_head">Donate Now</h2>
             <div class="button_wrapper">
               <button class="simple_btn">$100</button>
               <button class="main_btns">$300</button>
               <button class="simple_btn">$500</button>
             </div>
-            <div class="button_wrapper">
+            <div class="secondbutton_wrapper">
               <button class="simple_btn">$1000</button>
               <button class="simple_btn">$ Other Amount</button>
             </div>
@@ -112,7 +132,7 @@
             scelerisque. Mauris ipsum porttitor aliquet pulvinar fermentum ut .
           </p>
         </div>
-      </section>
+      </section> 
       <section class="programs_cards">
         <h1>More Programs</h1>
         <div class="mainCardUpper">
@@ -121,43 +141,45 @@
             <div class="cardservice">
               <div class="upper_sect">
                 <div class="left_parrt">
-                    <div class="left_sidecontent">
-                        <h1>War In Afghanistan</h1>
-                        <p>Lorem Ipsum is simply dummy text of the printing and text of the printing and typesetting.</p>
-                    </div>
-                    <div class="right_sidecontent">
-                        <h1>Location</h1>
-                        <p>Kundhare , Kabul</p>
-                    </div>
+                  <div class="left_sidecontent">
+                    <h1>War In Afghanistan</h1>
+                    <p>
+                      Lorem Ipsum is simply dummy text of the printing and text
+                      of the printing and typesetting.
+                    </p>
+                  </div>
+                  <div class="right_sidecontent">
+                    <h1>Location</h1>
+                    <p>Kundhare , Kabul</p>
+                  </div>
                 </div>
                 <div class="right_parrt">
-                    <button class="mainbtn">Donate</button>
+                  <button class="mainbtn">Donate</button>
                 </div>
               </div>
-              <hr class="hr_line">
+              <hr class="hr_line" />
               <div class="lower_sect">
                 <div class="left_side_content">
-                    <div class="card_flex">
-                        <h1>595+</h1>
-                        <p>Donation Received</p>
-                    </div>
-                    <div class="card_flex">
-                        <h1>48M</h1>
-                        <p>Money Donated</p>
-                    </div>
-                    <div class="card_flex">
-                        <h1>35+</h1>
-                        <p>Active Campaigns</p>
-                    </div>
-                    <div class="card_flex">
-                        <h1>N5000</h1>
-                        <p>Opened Charity</p>
-                    </div>
+                  <div class="card_flex">
+                    <h1>595+</h1>
+                    <p>Donation Received</p>
+                  </div>
+                  <div class="card_flex">
+                    <h1>48M</h1>
+                    <p>Money Donated</p>
+                  </div>
+                  <div class="card_flex">
+                    <h1>35+</h1>
+                    <p>Active Campaigns</p>
+                  </div>
+                  <div class="card_flex">
+                    <h1>N5000</h1>
+                    <p>Opened Charity</p>
+                  </div>
                 </div>
                 <div class="right_side_content">
-                    <h1>TOTAL COST
-                        </h1>
-                        <p>1.5 Million $</p>
+                  <h1>TOTAL COST</h1>
+                  <p>1.5 Million $</p>
                 </div>
               </div>
             </div>
@@ -165,7 +187,7 @@
         </div>
       </section>
     </main>
-    <footer>
+     <footer>
       <div class="footer_main">
         <div class="logo_div">
           <h2>Logo</h2>
@@ -234,5 +256,7 @@
         <p>Name © 2023 Inc. All Rights Reserved.</p>
       </div>
     </footer>
+    <script src="../../static/js/script.js">
+    </script>
   </body>
 </html>

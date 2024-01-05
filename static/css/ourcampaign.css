@@ -22,8 +22,6 @@
 }
 .Campaignbg {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
   background-image: url(../media/map.png);
   background-repeat: no-repeat;
   background-size: cover;
@@ -39,9 +37,7 @@
 .Campaignbg .Campaigntext h1 span {
   color: var(--primary);
 }
-.cardsection {
-  padding: 40px 60px;
-}
+
 .headflex {
   display: flex;
   margin-bottom: 20px;
@@ -126,9 +122,6 @@
 .right_about {
   position: relative;
 }
-.left_about {
-  padding: 0px 120px;
-}
 .right_imgsect {
   position: absolute;
   right: -3%;
@@ -155,6 +148,8 @@
 
 .main_innerdiv {
   position: relative;
+  display: flex;
+  justify-content: center;
 }
 .inner_div {
   background: url(../media/Group383.png) no-repeat;
@@ -177,7 +172,6 @@
 .main_headd {
   color: #000504;
   font-family: "Sora", sans-serif;
-  font-size: 48px;
   font-weight: 600;
   line-height: 58px;
   letter-spacing: 0em;
@@ -194,15 +188,11 @@
 }
 .flex_div {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
   border: 2px solid var(--primary);
-  padding: 15px 30px;
   margin-bottom: 10px;
 }
 .left_side {
   width: 50%;
-  border-right: 1px solid var(--primary);
 }
 .right_side {
   width: 50%;
@@ -230,7 +220,6 @@
   text-align: left;
 }
 .donatebtn {
-  width: 30%;
   border: none;
   border-radius: 10px 10px 0px 10px;
   background-color: var(--primary);
@@ -240,7 +229,120 @@
   font-weight: 500;
   padding: 10px 25px;
 }
+@media screen and (min-width: 320px) {
+  .Campaignbg {
+    padding: 40px 20px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .Campaigntext {
+    width: 100%;
+  }
+  .Campaign_img,
+  .Campaign_img img {
+    width: 100%;
+  }
+  .cardsection {
+    padding: 20px 20px;
+  }
+  .aboutus {
+    padding: 60px 20px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+  }
+  .left_about {
+    padding: 0px 20px;
+  }
+  .flex_div {
+    padding: 5px 0px;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .left_about,
+  .right_about {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 90%;
+  }
+
+  .main_innerdiv {
+    position: relative;
+    display: flex;
+    justify-content: center;
+  }
+  .inner_div {
+    background: url(../media/Group383.png) no-repeat;
+    background-size: 215px 380px;
+    width: 215px;
+    height: 380px;
+  }
+  .upperimg {
+    position: absolute;
+    width: 150px;
+    height: 190px;
+    top: -25px;
+    left: -50px;
+    z-index: 10;
+  }
+  .lowerimg {
+    position: absolute;
+    width: 150px;
+    height: 190px;
+    right: -50px;
+    bottom: -25px;
+    z-index: 10;
+  }
+  .main_headd {
+    font-size: 32px;
+  }
+  .left_side{
+  border-bottom: 1px solid var(--primary);
+}
+.left_side,.right_side{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.donatebtn {
+  width: 60%;
+}
+}
+
+@media screen and (min-width: 375px) {
+  .inner_div {
+    background: url(../media/Group383.png) no-repeat;
+    background-size: 245px 380px;
+    width: 245px;
+    height: 380px;
+  }
+  .donatebtn {
+    width: 50%;
+  }
+}
+@media screen and (min-width: 425px) {
+  .inner_div {
+    background: url(../media/Group383.png) no-repeat;
+    background-size: 245px 380px;
+    width: 245px;
+    height: 380px;
+  }
+  .donatebtn {
+    width: 40%;
+  }
+}
 @media screen and (min-width: 768px) {
+  .Campaignbg {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
   .Campaignbg,
   .aboutus {
     padding: 80px 40px;
@@ -250,10 +352,20 @@
     justify-content: center;
     align-items: center;
   }
+  .cardsection {
+    padding: 40px 30px;
+  }
   .card {
     width: 45%;
   }
-
+  .flex_div {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .main_innerdiv {
+    position: relative;
+  }
   .left_about,
   .right_about {
     display: flex;
@@ -272,23 +384,31 @@
     width: 200px;
     height: 265px;
     top: -50px;
-    left: -80px;
+    left: 55px;
     z-index: 10;
   }
   .lowerimg {
     position: absolute;
     width: 200px;
     height: 265px;
-    right: -80px;
+    right: 50px;
     bottom: -25px;
     z-index: 10;
   }
-
+  .left_side{
+    border-bottom: none;
+    border-right: 1px solid var(--primary);
+  }
   .donatebtn {
     width: 30%;
   }
 }
 @media screen and (min-width: 1024px) {
+  .Campaignbg {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
   .Campaignbg,
   .aboutus {
     padding: 80px 80px;
@@ -297,6 +417,9 @@
     flex-direction: row;
     justify-content: center;
     align-items: center;
+  }
+  .cardsection {
+    padding: 40px 60px;
   }
   .card {
     width: 30%;
@@ -321,14 +444,14 @@
     width: 205px;
     height: 290px;
     top: -73px;
-    left: -94px;
+    left: -40px;
     z-index: 10;
   }
   .lowerimg {
     position: absolute;
     width: 205px;
     height: 290px;
-    right: 15px;
+    right: -20px;
     bottom: -35px;
     z-index: 10;
   }
@@ -338,6 +461,9 @@
   }
 }
 @media screen and (min-width: 1440px) {
+  .Campaignbg {
+    flex-direction: row;
+  }
   .Campaignbg,
   .aboutus {
     padding: 80px 120px;
@@ -350,20 +476,26 @@
     display: block;
     padding: 0px 60px;
   }
+  .inner_div {
+    background: url(../media/Group383.png) no-repeat;
+    background-size: 325px 435px;
+    width: 330px;
+    height: 435px;
+  }
   .upperimg {
     position: absolute;
     width: 268px;
-    height: 380px;
+    height: 310px;
     top: -76px;
-    left: -145px;
+    left: -100px;
     z-index: 10;
   }
   .lowerimg {
     position: absolute;
     width: 268px;
-    height: 380px;
-    right: -20px;
-    bottom: -80px;
+    height: 310px;
+    right: -72px;
+    bottom: -40px;
     z-index: 10;
   }
 

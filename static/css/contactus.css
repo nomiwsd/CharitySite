@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Sora:wght@300&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@200;300&display=swap");
+
 :root {
   --primary: #1b9274;
   --secondary: #5fb39e;
@@ -17,36 +18,36 @@
   --fontfamily: "Outfit", sans-serif;
   --specialfont: "Rubik", sans-serif;
 }
-.contactus {
-  padding: 80px 120px;
-  display: flex;
-  justify-content: space-between;
-}
+
 .contactus_div {
-  padding: 0px 40px;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
   gap: 10px;
 }
+
 .contactpart {
   display: flex;
   gap: 20px;
   align-items: center;
   justify-content: center;
 }
+
 .contactpart .iconmsg {
   background-color: var(--secondarybg);
   padding: 20px;
 }
+
 .iconmsg svg {
   font-size: 20px;
   color: var(--primary);
 }
+
 .contactpart {
   margin-top: 20px;
 }
+
 .text_part h4 {
   font-size: 20px;
   font-weight: 800;
@@ -54,6 +55,7 @@
   line-height: 22px;
   color: var(--primarytext);
 }
+
 .text_part p {
   font-size: 20px;
   font-weight: 400;
@@ -61,19 +63,22 @@
   line-height: 22px;
   color: #727272;
 }
+
 .contactpart .text_part {
   display: flex;
   flex-direction: column;
 }
+
 .cardsdiv {
   display: flex;
   z-index: 20 !important;
 }
+
 .cardsect {
-  padding: 80px 60px;
   position: relative;
   overflow: hidden;
 }
+
 .cards_div .quotes {
   font-family: "Sora", sans-serif;
   font-size: 80px;
@@ -83,6 +88,7 @@
   text-align: left;
   color: var(--primary);
 }
+
 .cards_div .cardtext_head {
   font-family: "Sora", sans-serif;
   font-size: 24px;
@@ -92,6 +98,7 @@
   text-align: left;
   color: var(--primarytext);
 }
+
 .cards_div .cardtext_para {
   margin-bottom: 30px;
   font-family: "Work Sans", sans-serif;
@@ -109,6 +116,7 @@
   padding: 10px;
   border: 1px solid #00725e;
 }
+
 .mainflex .flex_part h4 {
   font-family: "Sora", sans-serif;
   font-size: 16px;
@@ -118,6 +126,7 @@
   text-align: left;
   color: #454545;
 }
+
 .mainflex .flex_part p {
   font-family: "Work Sans", sans-serif;
   font-size: 16px;
@@ -127,6 +136,7 @@
   text-align: left;
   color: #454545;
 }
+
 .mainflex .flex_part {
   display: flex;
   flex-direction: column;
@@ -134,20 +144,39 @@
   align-items: center;
   gap: 0px;
 }
+
 .padd {
   display: flex;
   flex-direction: column;
   gap: 10px;
 }
-@media screen and (min-width: 768px) {
-  .cardsdiv {
-    gap: 10px;
-  }
+
+@media screen and (min-width: 320px) {
   .contactus {
-    padding: 80px 40px;
+    padding: 20px 20px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .img_div {
+    width: 100%;
+  }
+  .img_div img {
+    width: 100%;
+  }
+  .contactus_div {
+    padding: 0px 10px;
+  }
+  .contactus_div {
+    width: 100%;
   }
   .cardsect {
-    padding: 80px 30px;
+    padding: 40px 20px;
+  }
+  .cardsdiv {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
   }
   .mainflex {
     display: flex;
@@ -157,12 +186,50 @@
     gap: 10px;
   }
 }
+@media screen and (min-width: 768px) {
+  .cardsdiv {
+    gap: 10px;
+  }
+
+  .contactus {
+    padding: 80px 40px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .contactus_div {
+    padding: 0px 40px;
+  }
+  .cardsect {
+    padding: 80px 30px;
+  }
+  .cardsdiv {
+    display: flex;
+    flex-direction: row;
+  }
+  .mainflex {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+  }
+}
+
 @media screen and (min-width: 1024px) {
   .cardsdiv {
     gap: 20px;
   }
+
   .contactus {
     padding: 80px 80px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .contactus_div {
+    padding: 0px 40px;
   }
   .mainflex {
     display: flex;
@@ -170,6 +237,7 @@
     justify-content: space-around;
     gap: 10px;
   }
+
   .cardsect {
     padding: 80px 40px;
   }
@@ -179,8 +247,15 @@
   .cardsdiv {
     gap: 30px;
   }
+
   .contactus {
     padding: 80px 120px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .contactus_div {
+    padding: 0px 40px;
   }
   .mainflex {
     display: flex;

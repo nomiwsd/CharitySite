@@ -21,9 +21,6 @@
   --specialfont: "Rubik", sans-serif;
 }
 
-.hero_section {
-  padding: 80px 120px;
-}
 .main_hero {
   display: flex;
   gap: 50px;
@@ -51,7 +48,6 @@
 }
 .button_wrapper {
   display: flex;
-  gap: 15px;
   margin: 10px 0px;
 }
 .simple_btn {
@@ -64,7 +60,6 @@
   text-align: left;
   color: #000;
   background-color: transparent;
-  padding: 5px 50px;
   border-radius: 10px 10px 0px 10px;
   border: 1px solid var(--primary);
 }
@@ -78,7 +73,6 @@
   text-align: left;
   color: var(--primary);
   background-color: transparent;
-  padding: 5px 20px;
   border-radius: 10px 10px 0px 10px;
   border: 1px solid var(--primary);
 }
@@ -92,7 +86,6 @@
   border: none;
   background-color: var(--primary);
   color: white;
-  padding: 5px 50px;
   border-radius: 10px 10px 0px 10px;
 }
 .flexbtn {
@@ -101,8 +94,7 @@
 }
 .flex_btn {
   width: 100%;
-  display: inline-flex;
-  justify-content: end;
+  display: flex;
   height: 40% !important;
 }
 .hero_footer {
@@ -131,10 +123,6 @@
   letter-spacing: 0em;
   text-align: left;
 }
-.programs_cards {
-  padding: 0px 120px;
-  margin-bottom: 20px;
-}
 
 .mainCardUpper {
   display: flex;
@@ -151,7 +139,6 @@
   background-color: var(--primarybg);
   box-shadow: 0px 4px 12px 0px #00c89c4d;
   border-radius: 10px;
-  padding: 20px;
   z-index: 10;
 }
 .bgbox {
@@ -170,11 +157,10 @@
 }
 .left_parrt {
   display: flex;
-  gap: 75px;
 }
 .left_sidecontent,
 .right_sidecontent {
-  width: 40%;
+  width: 100%;
 }
 .left_sidecontent h1,
 .right_sidecontent h1 {
@@ -200,20 +186,14 @@
 .hr_line {
   width: 100%;
   border: 1px solid var(--primary);
-  margin: 10px;
 }
-.lower_sect {
-  display: flex;
-  justify-content: space-between;
-}
+.lower_sect,
 .left_side_content {
   display: flex;
-  gap: 40px;
 }
 .card_flex {
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
 }
 .card_flex h1 {
   font-family: "Work Sans", sans-serif;
@@ -244,10 +224,253 @@
 }
 .right_side_content p {
   font-family: "Work Sans", sans-serif;
-  font-size: 30px;
   font-weight: 600;
   line-height: 45px;
   letter-spacing: 0em;
   text-align: left;
-  color: #000000B2;
+  color: #000000b2;
 }
+
+@media screen and (min-width: 320px) {
+  .hero_section {
+    padding: 60px 20px;
+  }
+  .headflex {
+    flex-direction: column;
+  }
+  .brr {
+    border-right: none;
+  }
+  .main_hero {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+  }
+  .mainheading {
+    font-size: 18px;
+  }
+  .button_wrapper {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+  }
+  .flex_btn {
+    justify-content: center;
+    align-items: center;
+  }
+  .simple_btn,
+  .main_btns {
+    padding: 5px 20px;
+  }
+  .dropdown_btn {
+    padding: 5px 20px;
+  }
+  .secondbutton_wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+  }
+
+  .programs_cards {
+    padding: 0px 20px;
+    margin-bottom: 20px;
+  }
+  .upper_sect {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .left_parrt {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .left_sidecontent,
+  .right_sidecontent {
+    width: 100%;
+  }
+  .lower_sect {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .left_side_content {
+    flex-direction: column;
+  }
+  .card_flex {
+    justify-content: center;
+    align-items: center;
+  }
+  .cardservice {
+    padding: 20px;
+  }
+  .hr_line {
+    margin: 10px 0px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .hero_section {
+    padding: 80px 40px;
+  }
+
+  .card_flex {
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+  .main_hero {
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 20px;
+  }
+  .img_div {
+    width: 31.3%;
+  }
+  .img_div img {
+    width: 100%;
+  }
+
+  .hr_line {
+    margin: 10px;
+  }
+  .btnwrap,
+  .flex_btn {
+    width: 31.3%;
+  }
+  .headflex {
+    flex-direction: row;
+    width: 100%;
+  }
+  .brr {
+    border-right: 1px solid var(--primary);
+  }
+  .button_wrapper {
+    flex-direction: row;
+    justify-content: start;
+    align-items: start;
+    gap: 10px;
+  }
+  .simple_btn,
+  .main_btns {
+    padding: 5px 10px;
+  }
+  .dropdown_btn {
+    padding: 5px 10px;
+  }
+  .flex_btn {
+    align-items: start;
+  }
+  .secondbutton_wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 10px;
+    margin-bottom: 10px;
+  }
+  .flex_btn {
+    justify-content: end;
+    align-items: flex-start;
+  }
+  .programs_cards {
+    padding: 0px 40px;
+    margin-bottom: 20px;
+  }
+  .cardservice {
+    padding: 10px;
+  }
+  .left_side_content {
+    gap: 0px;
+  }
+  .right_side_content p {
+    font-size: 18px;
+  }
+
+  .upper_sect {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .left_parrt {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: start;
+  }
+
+  .left_sidecontent,
+  .right_sidecontent {
+    width: 40%;
+  }
+
+  .lower_sect {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+
+  .left_side_content {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .hero_section {
+    padding: 60px 60px;
+  }
+  .main_hero {
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 30px;
+  }
+
+  .secondbutton_wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 10px;
+    margin-bottom: 10px;
+  }
+  .programs_cards {
+    padding: 0px 80px;
+    margin-bottom: 20px;
+  }
+  .cardservice {
+    padding: 15px;
+  }
+  .left_side_content {
+    display: flex;
+    gap: 10px;
+  }
+  .right_side_content p {
+    font-size: 26px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .hero_section {
+    padding: 60px 120px;
+  }
+  .programs_cards {
+    padding: 0px 120px;
+    margin-bottom: 20px;
+  }
+  .left_side_content {
+    display: flex;
+    gap: 40px;
+  }
+}
+
