@@ -23,12 +23,12 @@
         <div class="address">
           <span
             ><i class="fa-solid fa-phone"></i>
-            <p>+00000000000</p></span
-          >
+            <p>+00000000000</p>
+          </span>
           <span
             ><i class="fa-regular fa-envelope"></i>
-            <p>info@******.com</p></span
-          >
+            <p>info@******.com</p>
+          </span>
         </div>
         <div class="sociallinks">
           <a href=""><i class="fa-brands fa-twitter"></i></a>
@@ -39,7 +39,31 @@
       </div>
       <nav>
         <p>Logo</p>
-        <div class="navbar">
+        <ul class="nav-linksmd">
+          <li>
+            <div class="dropdown">
+              <button>
+                Who We are <i class="fa-solid fa-chevron-down"></i>
+              </button>
+              <div class="dropdown-content">
+                <a href="#">Item 1</a>
+                <a href="#">Item 2</a>
+                <a href="#">Item 3</a>
+              </div>
+            </div>
+          </li>
+          <li><a href="{% url 'ourcompaign' %}">Our Campaign</a></li>
+          <li><a href="{% url 'news' %}">News</a></li>
+          <li><a href="{% url 'contactus' %}">Contact Us</a></li>
+          <li>
+            <a href="{% url 'donatenow'%}">
+              <button class="navbtn">
+                Donate Now
+                <i class="fa-solid fa-heart"></i></button
+            ></a>
+          </li>
+        </ul>
+        <div class="navbarsm">
           <!-- Close button added to the menu -->
           <div class="navflex">
             <p>Logo</p>
@@ -49,24 +73,12 @@
           </div>
 
           <ul class="nav-list">
-            <li >
+            <li>
               <div class="accordion_menu">
                 <button class="accordion-btn">
                   Who We are <i class="fa-solid fa-chevron-down"></i>
                 </button>
                 <div class="accordion-content">
-                  <a href="#">Item 1</a>
-                  <a href="#">Item 2</a>
-                  <a href="#">Item 3</a>
-                </div>
-  
-              </div>
-              
-              <div class="dropdown">
-                <button>
-                  Who We are <i class="fa-solid fa-chevron-down"></i>
-                </button>
-                <div class="dropdown-content">
                   <a href="#">Item 1</a>
                   <a href="#">Item 2</a>
                   <a href="#">Item 3</a>
@@ -77,9 +89,11 @@
             <li><a href="{% url 'news' %}">News</a></li>
             <li><a href="{% url 'contactus' %}">Contact Us</a></li>
             <li>
-              <button class="navbtn">
-                Donate Now <i class="fa-solid fa-heart"></i>
-              </button>
+              <a href="{% url 'donatenow'%}">
+                <button class="navbtn">
+                  Donate Now
+                  <i class="fa-solid fa-heart"></i></button
+              ></a>
             </li>
           </ul>
         </div>
@@ -87,13 +101,27 @@
       </nav>
     </header>
     <main>
-       <section class="hero_section">
+      <section class="hero_section">
+        <!-- Modal for Card Selection -->
+
+
+<!-- Modal for Bank Selection -->
+<div class="modal" id="bankModal">
+  <!-- Add your modal content for Bank Selection here -->
+  <p>This is the Bank Selection modal.</p>
+  <button onclick="closeModal('bankModal')">Close Modal</button>
+</div>
+
+
+
         <div class="headflex">
           <h2 class="mainheading brr">Zakah and Sadaqah Services</h2>
           <h2 class="mainheading">Donate</h2>
         </div>
         <div class="main_hero">
-          <div class="img_div"><img src="../../static/media/Rectangle 64.png" alt="" /></div>
+          <div class="img_div">
+            <img src="../../static/media/Rectangle 64.png" alt="" />
+          </div>
           <div class="btnwrap">
             <h2 class="hero_head">Donate Now</h2>
             <div class="button_wrapper">
@@ -111,7 +139,8 @@
           </div>
           <div class="flex_btn">
             <select class="dropdown_btn">
-              <option value="" selected>Card payment</option>
+              <option value="" selected>Select Any Method</option>
+              <option value="">Card payment</option>
               <option value="">Bank Account</option>
             </select>
           </div>
@@ -132,7 +161,8 @@
             scelerisque. Mauris ipsum porttitor aliquet pulvinar fermentum ut .
           </p>
         </div>
-      </section> 
+      </section>
+
       <section class="programs_cards">
         <h1>More Programs</h1>
         <div class="mainCardUpper">
@@ -187,7 +217,7 @@
         </div>
       </section>
     </main>
-     <footer>
+    <footer>
       <div class="footer_main">
         <div class="logo_div">
           <h2>Logo</h2>
@@ -256,7 +286,39 @@
         <p>Name © 2023 Inc. All Rights Reserved.</p>
       </div>
     </footer>
-    <script src="../../static/js/script.js">
+    <script src="../../static/js/script.js"></script>
+    <script>
+      function openCardPaymentModal() {
+        document.getElementById("cardPaymentModal").style.display = "block";
+      }
+
+      function openBankAccountModal() {
+        document.getElementById("bankAccountModal").style.display = "block";
+      }
+
+      function closeModal(modalId) {
+        document.getElementById(modalId).style.display = "none";
+      }
+
+      document.addEventListener("DOMContentLoaded", function () {
+        document.querySelector(".mainbtn").addEventListener("click", function () {
+          var selectedOption = document.querySelector(".dropdown_btn").value;
+
+          if (selectedOption === "Card payment") {
+            openCardPaymentModal();
+          } else if (selectedOption === "Bank Account") {
+            openBankAccountModal();
+          }
+        });
+
+        window.addEventListener("click", function (event) {
+          if (event.target.classList.contains("modal")) {
+            document.querySelectorAll(".modal").forEach(function (modal) {
+              modal.style.display = "none";
+            });
+          }
+        });
+      });
     </script>
   </body>
 </html>

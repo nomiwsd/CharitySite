@@ -1,92 +1,579 @@
 {% load static%}
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link
-      href="{% static 'fontawesomefree/css/all.min.css' %}"
-      rel="stylesheet"
-      type="text/css"
-    />
-    <link rel="stylesheet" href="{% static '/css/hompage.css' %}" />
+    <link href="{% static 'fontawesomefree/css/all.min.css' %}" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="{% static '/css/homepage.css' %}" />
     <!-- One file includes all the Font Awesome Free icons and utilities -->
     <script src="{% static 'fontawesomefree/js/all.min.js' %}"></script>
-  </head>
-  <body>
-     <main> 
-       
-    </main>  
+
+<body>
+    <header>
+        <div class="topdiv">
+            <div class="address">
+                <span><i class="fa-solid fa-phone"></i>
+                    <p>+00000000000</p>
+                </span>
+                <span><i class="fa-regular fa-envelope"></i>
+                    <p>info@******.com</p>
+                </span>
+            </div>
+            <div class="sociallinks">
+                <a href=""><i class="fa-brands fa-twitter"></i></a>
+                <a href=""><i class="fa-brands fa-instagram"></i></a>
+                <a href=""><i class="fa-brands fa-facebook"></i></a>
+                <a href=""><i class="fa-brands fa-youtube"></i></a>
+            </div>
+        </div>
+        <nav>
+            <p>Logo</p>
+            <ul class="nav-linksmd">
+                <li>
+                    <div class="dropdown">
+                        <button>
+                            Who We are <i class="fa-solid fa-chevron-down"></i>
+                        </button>
+                        <div class="dropdown-content">
+                            <a href="#">Item 1</a>
+                            <a href="#">Item 2</a>
+                            <a href="#">Item 3</a>
+                        </div>
+                    </div>
+                </li>
+                <li><a href="{% url 'ourcompaign' %}">Our Campaign</a></li>
+                <li><a href="{% url 'news' %}">News</a></li>
+                <li><a href="{% url 'contactus' %}">Contact Us</a></li>
+                <li>
+                    <a href="{% url 'donatenow'%}">
+                        <button class="navbtn">
+                            Donate Now
+                            <i class="fa-solid fa-heart"></i></button></a>
+                </li>
+            </ul>
+            <div class="navbarsm">
+                <!-- Close button added to the menu -->
+                <div class="navflex">
+                    <p>Logo</p>
+                    <div class="close-btn" onclick="toggleMenu()">
+                        <i class="fa-solid fa-close"></i>
+                    </div>
+                </div>
+
+                <ul class="nav-list">
+                    <li>
+                        <div class="accordion_menu">
+                            <button class="accordion-btn">
+                                Who We are <i class="fa-solid fa-chevron-down"></i>
+                            </button>
+                            <div class="accordion-content">
+                                <a href="#">Item 1</a>
+                                <a href="#">Item 2</a>
+                                <a href="#">Item 3</a>
+                            </div>
+                        </div>
+
+
+                    </li>
+                    <li><a href="{% url 'ourcompaign' %}">Our Campaign</a></li>
+                    <li><a href="{% url 'news' %}">News</a></li>
+                    <li><a href="{% url 'contactus' %}">Contact Us</a></li>
+                    <li>
+                        <a href="{% url 'donatenow'%}">
+                            <button class="navbtn">
+                                Donate Now
+                                <i class="fa-solid fa-heart"></i></button></a>
+                    </li>
+                </ul>
+            </div>
+            <div class="menu-toggle">&#9776;</div>
+        </nav>
+    </header>
+    <main>
+
+        <section class="landingsection">
+            <div class="landingdiv">
+                <div class="leftdiv">
+                    <div class="innerdiv">
+                        <p class="importanttext">TRUSTED CHARITY COMPANY</p>
+                        <h1 class="mainhead">
+                            Let’s Help And Make People Smile By <span>Giving</span> Of Yours
+                        </h1>
+                        <p class="simpletext">
+                            No matter how small the donation you give will mean a lot to
+                            them, let's donate now to help fellow humans in need
+                        </p>
+                    </div>
+                    <button class="herobtn">Get Started</button>
+                </div>
+                <div class="rightdiv">
+                    <div class="main_card_div">
+                        <div class="bgbox bgbox1"></div>
+                        <div class="card">
+                            <div class="icon_div charity_icon"><img src="../../static/media/charity.png" class="icons"
+                                    alt="Charity Icon" /></div>
+                            <div class="content">
+                                <button class="mainbtn">Education</button>
+                                <div class="textdiv">
+                                    <h1 class="mainhead_2">
+                                        Help Children Get out of Poverty & have a Future
+                                    </h1>
+                                    <p class="simpletext">
+                                        Lorem ipsum dolor sit amet consectetur. Et vitae sapien odio
+                                        dis. Scelerisque dolor fermentum pellentesque tincidunt
+                                        gravida praesent sed.
+                                    </p>
+                                </div>
+                                <div class="progressbardiv">
+                                    <div class="progress-value">29%</div>
+                                    <div class="progress-container">
+                                        <div class="progress-bar" style="width: 50%"></div>
+                                    </div>
+                                    <div class="progresstext">
+                                        <p>$05,480 <span>Raised</span></p>
+                                        <p>$20,000 <span>Goal</span></p>
+                                    </div>
+                                </div>
+                                <div class="btndiv">
+                                    <button class="paybtn">
+                                        <i class="fa-brands fa-apple"></i>Pay
+                                    </button>
+                                    <button class="paybtn">
+                                        <i class="fa-brands fa-google"></i>Pay
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="bgbox bgbox2"></div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+
+        <section class="Whowearesection">
+            <div class="left_div">
+                <div class="icon_div solids_icon">
+                    <img src="../../static/media/solidarity.png" alt="Solidarity Icon" class="iconimg" />
+                </div>
+                <div class="over_lay">
+                    <img src="../../static/media/1.png" alt="Childern Image" class="bgimg" />
+                    <div class="frontimg">
+                        <img src="../../static/media/2.png" alt="Childern Image" />
+                    </div>
+
+                </div>
+            </div>
+            <div class="right_div">
+                <p class="importanttext">Who we are</p>
+                <h1 class="mainhead_3">
+                    We’re Non-Profit Charity & NGO Organization
+                </h1>
+                <hr class="hrline" />
+                <p class="simpletext">
+                    Join us and make your life more valuable and useful, be a part of us
+                    and contribute to the nation and state and the simplest for the
+                    <br />
+                    environment and yourself
+                </p>
+                <div class="listpart">
+                    <p>
+                        <i class="fa-solid fa-circle-check"></i>Support people in extreme
+                        need
+                    </p>
+                    <p>
+                        <i class="fa-solid fa-circle-check"></i>Largest global
+                        crowdfunding community
+                    </p>
+                    <p>
+                        <i class="fa-solid fa-circle-check"></i>Make the world a better
+                        place
+                    </p>
+                    <p>
+                        <i class="fa-solid fa-circle-check"></i>Share your love for
+                        community
+                    </p>
+                </div>
+                <div><button class="mainbtn">About Us</button></div>
+            </div>
+        </section>
+
+        <section class="ourcampaign">
+            <div class="leftdiv">
+                <p class="importanttext gp">Our Campaign</p>
+                <h1 class="mainhead_3">
+                    Giving help to those <br />
+                    who need it
+                </h1>
+            </div>
+            <div class="cardsdiv">
+                <div class="cardcampaign">
+                    <img src="../../static/media/Rectangle 390 (2).png" alt="" />
+                    <p class="cardtext">
+                        Fundraising for children and refugees from *******
+                    </p>
+                    <div class="cardinnerdiv">
+                        <div class="progressbartext">
+                            <p class="boldtext">$5,200</p>
+                            <p class="simpletext">$10,400</p>
+                        </div>
+                        <div class="progress-container">
+
+                            <div class="progress-bar" style="width: 50%"></div>
+                        </div>
+                        <div class="buttondiv">
+                            <button class="mainbtn">Donate Now</button>
+                            <button class="simplebtn">See Details</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="cardcampaign">
+                    <img src="../../static/media/Rectangle 390 (1).png" alt="" />
+                    <p class="cardtext">
+                        Food, water and medicine for shelter on the ******
+                    </p>
+                    <div class="cardinnerdiv">
+                        <div class="progressbartext">
+                            <p class="boldtext">$1,124</p>
+                            <p class="simpletext">$10,400</p>
+                        </div>
+                        <div class="progress-container">
+
+                            <div class="progress-bar" style="width: 50%"></div>
+                        </div>
+                        <div class="buttondiv">
+                            <button class="mainbtn">Donate Now</button>
+                            <button class="simplebtn">See Details</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="cardcampaign">
+                    <img src="../../static/media/Rectangle 390.png" alt="" />
+                    <p class="cardtext">
+                        massive invasion of Palestine, war in the Gaza
+                    </p>
+                    <div class="cardinnerdiv">
+                        <div class="progressbartext">
+                            <p class="boldtext">$28,200</p>
+                            <p class="simpletext">$64,000</p>
+                        </div>
+                        <div class="progress-container">
+                            <div class="progress-bar" style="width: 50%"></div>
+                        </div>
+                        <div class="buttondiv">
+                            <button class="mainbtn">Donate Now</button>
+                            <button class="simplebtn">See Details</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="latestnews">
+            <p class="importanttext">Latest News</p>
+            <div class="newstextdiv">
+                <h1 class="mainhead_3">Latest Articles</h1>
+                <div class="flexsect">
+                    <button>All News</button>
+                </div>
+            </div>
+            <div class="main_news_div">
+                <div class="cardnews">
+                    <div class="newsimgdiv">
+                        <button>WATER</button>
+                        <img src="../../static/media/Bitmap (2).png" alt="" />
+                    </div>
+                    <div class="textnewsdiv">
+                        <h2>Bring together people who care about a cause</h2>
+                        <div class="progress-container">
+                            <div class="progress-bar" style="width: 30%"></div>
+                        </div>
+                        <p class="">15 Oct, 2023</p>
+                    </div>
+                </div>
+                <div class="cardnews">
+                    <div class="newsimgdiv">
+                        <button>WATER</button>
+                        <img src="../../static/media/Bitmap (1).png" alt="" />
+                    </div>
+                    <div class="textnewsdiv">
+                        <h2>Bring together people who care about a cause</h2>
+                        <div class="progress-container">
+                            <div class="progress-bar" style="width: 30%"></div>
+                        </div>
+                        <p class="">10 Oct, 2023</p>
+                    </div>
+                </div>
+                <div class="cardnews">
+                    <div class="newsimgdiv">
+                        <button>WATER</button>
+                        <img src="../../static/media/Bitmap.png" alt="" />
+                    </div>
+                    <div class="textnewsdiv">
+                        <h2>Bring together people who care about a cause</h2>
+                        <div class="progress-container">
+                            <div class="progress-bar" style="width: 30%"></div>
+                        </div>
+                        <p class="">7 Oct, 2023</p>
+                    </div>
+                </div>
+            </div>
+            <div class="emailsect">
+                <div class="emailtext">
+                    <h2>NewsLetter</h2>
+                    <p>Bring together people who care about a cause</p>
+                </div>
+                <div class="inputsect">
+                    <input type="email" placeholder="Your Email" />
+                    <button>Subscribe</button>
+                </div>
+            </div>
+        </section>
+        
+        <section class="testimonialsection">
+            <div class="right_img"></div>
+             <div class="left_img"></div>
+             <div class="testimonialmaindiv">
+               <div class="testimonialimgdiv">
+                 <div class="Main-Bg">
+                    <img src="../../static/media/Layer2.png" alt="">
+                 </div>
+               </div>
+                <div class="testimonialtextdiv">
+                 <p class="importanttext">Testimonials</p>
+                 <h1 class="mainhead_3">
+                   What People Say about <br />
+                   <span>Our Organization</span>
+                 </h1>
+                 <p class="simpletext">
+                   “Lorem ipsum dolor sit amet, consectetur adipiscing elit. Felis
+                   pellentesque cras interdum ornare feugiat eget feugiat. Nunc, urna
+                   vitae pellentesque risus, ut volutpat eget libero vel. Vitae urna
+                   pharetra sem consectetur sed mi, nisi id feugiat. At egestas
+                   praesent mauris metus risus accumsan. Cras gravida natoque
+                   maecenas risus ultricies. Sed tincidunt porttitor viverra nunc
+                   neque, enim. Tristique molestie turpis turpis diam
+                 </p>
+     
+                 <p class="authorname">Kay Henderson</p>
+                 <p class="designation">Businessman - Entrepreneur</p>
+               </div>
+            </div>
+           </section>
+
+           
+       <section class="countersection">
+        <div class="upperdiv">
+          <div class="innerdiv">
+            <p class="importanttext">Act Now for a Better World</p>
+            <h1 class="mainhead_3">
+              Solutions to Help People in Need <br />
+              and Save the Planet
+            </h1>
+            <div class="borderbt"></div>
+          </div>
+          <button class="mainbtn">
+            Donate Now <i class="fa-solid fa-heart"></i>
+          </button>
+        </div>
+        <div class="counterpart">
+          <div class="flexpart">
+            <h2>20M</h2>
+            <div class="borderbt"></div>
+            <p>Number of Supporters</p>
+          </div>
+          <div class="flexpart">
+            <h2>15K+</h2>
+            <div class="borderbt"></div>
+            <p>Volunteers Worldwide</p>
+          </div>
+          <div class="flexpart">
+            <h2>68K+</h2>
+            <div class="borderbt"></div>
+            <p>We've Helped Raise</p>
+          </div>
+          <div class="flexpart">
+            <h2>10M+</h2>
+            <div class="borderbt"></div>
+            <p>Projects Funded</p>
+          </div>
+        </div>
+      </section>
+      
+      <section class="NeedHelpsect">
+        <div class="right_bg"></div>
+        <div class="left_bg"></div>
+        <div class="textpart">
+          <div class="innerdiv">
+            <p class="importanttext">NeedHelp?</p>
+            <h1 class="mainhead_3">The Answers to All Your Questions</h1>
+            <div class="borderbt"></div>
+            <p class="simpletext">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore.
+            </p>
+          </div>
+        </div>
+        <div class="mainaccordian">
+          <div class="accordion">
+            <div class="accordion-item">
+              <div class="accordion-header">
+                <h4 class="main_head">How much time do I need to volunteer?</h4>
+                <span class="toggle-sign">+</span>
+              </div>
+              <div class="accordion-content">
+                <p class="simpletext">
+                  Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                  Corporis aperiam necessitatibus incidunt. Ad esse
+                  exercitationem quo veritatis, libero repudiandae expedita et
+                  accusamus quia asperiores dignissimos, beatae, quaerat
+                  mollitia unde dicta!
+                </p>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <div class="accordion-header">
+                <h4 class="main_head">How Will My Donation Be Used?</h4>
+                <span class="toggle-sign">+</span>
+              </div>
+              <div class="accordion-content">
+                <p class="simpletext">
+                  Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                  Corporis aperiam necessitatibus incidunt. Ad esse
+                  exercitationem quo veritatis, libero repudiandae expedita et
+                  accusamus quia asperiores dignissimos, beatae, quaerat
+                  mollitia unde dicta!
+                </p>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <div class="accordion-header">
+                <h4 class="main_head">How Can I Apply for a Job with You?</h4>
+                <span class="toggle-sign">+</span>
+              </div>
+              <div class="accordion-content">
+                <p class="simpletext">
+                  Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                  Corporis aperiam necessitatibus incidunt. Ad esse
+                  exercitationem quo veritatis, libero repudiandae expedita et
+                  accusamus quia asperiores dignissimos, beatae, quaerat
+                  mollitia unde dicta!
+                </p>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <div class="accordion-header">
+                <h4 class="main_head">How Can I Participate?</h4>
+                <span class="toggle-sign">+</span>
+              </div>
+              <div class="accordion-content">
+                <p class="simpletext">
+                  Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                  Corporis aperiam necessitatibus incidunt. Ad esse
+                  exercitationem quo veritatis, libero repudiandae expedita et
+                  accusamus quia asperiores dignissimos, beatae, quaerat
+                  mollitia unde dicta!
+                </p>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <div class="accordion-header">
+                <h4 class="main_head">
+                  We Help Non-Profits Become More Effective
+                </h4>
+                <span class="toggle-sign">+</span>
+              </div>
+              <div class="accordion-content">
+                <p class="simpletext">
+                  Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                  Corporis aperiam necessitatibus incidunt. Ad esse
+                  exercitationem quo veritatis, libero repudiandae expedita et
+                  accusamus quia asperiores dignissimos, beatae, quaerat
+                  mollitia unde dicta!
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section> 
+
+      
     <footer>
-      <div class="footer_main">
-        <div class="logo_div">
-          <h2>Logo</h2>
-          <p>
-            Whatever it is that you care about, there will be a charity working
-            on it. Charities help in lots of different ways
-          </p>
-          <div class="sociallinks">
-            <a href=""><i class="fa-brands fa-twitter"></i></a>
-            <a href=""><i class="fa-brands fa-instagram"></i></a>
-            <a href=""><i class="fa-brands fa-facebook"></i></a>
-            <a href=""><i class="fa-brands fa-youtube"></i></a>
+        <div class="footer_main">
+          <div class="logo_div">
+            <h2>Logo</h2>
+            <p>
+              Whatever it is that you care about, there will be a charity working
+              on it. Charities help in lots of different ways
+            </p>
+            <div class="sociallinks">
+              <a href=""><i class="fa-brands fa-twitter"></i></a>
+              <a href=""><i class="fa-brands fa-instagram"></i></a>
+              <a href=""><i class="fa-brands fa-facebook"></i></a>
+              <a href=""><i class="fa-brands fa-youtube"></i></a>
+            </div>
+          </div>
+          <div class="footer_links">
+            <h2>Menu</h2>
+            <div class="footer_linkss">
+              <a href="">Donations</a>
+              <a href="">Features</a>
+              <a href="">Categories</a>
+              <a href="">Volunteer</a>
+              <a href="">About Us</a>
+            </div>
+          </div>
+          <div class="footer_links">
+            <h2>About Us</h2>
+            <div class="footer_linkss">
+              <a href="">How it Works?</a>
+              <a href="">Contact Us</a>
+              <a href="">FAQ</a>
+              <a href="">Help</a>
+            </div>
+          </div>
+          <div class="contactinfo_div">
+            <h2>Contact Info</h2>
+            <div class="contact_info">
+              <div class="bggreen">
+                <i class="fa-solid fa-phone"></i>
+              </div>
+              <div class="text_info">
+                <p class="bold_text">Call Us</p>
+                <p class="simple_text">+1-0000000000</p>
+              </div>
+            </div>
+            <div class="contact_info">
+              <div class="bggreen">
+                <i class="fa-solid fa-envelope"></i>
+              </div>
+              <div class="text_info">
+                <p class="bold_text">Mail Us</p>
+                <p class="simple_text">info@******.com</p>
+              </div>
+            </div>
+            <div class="contact_info">
+              <div class="bggreen">
+                <i class="fa-solid fa-location-dot"></i>
+              </div>
+              <div class="text_info">
+                <p class="bold_text">Visit us</p>
+                <p class="simple_text">Your Address here</p>
+              </div>
+            </div>
           </div>
         </div>
-        <div class="footer_links">
-          <h2>Menu</h2>
-          <div class="footer_linkss">
-            <a href="">Donations</a>
-            <a href="">Features</a>
-            <a href="">Categories</a>
-            <a href="">Volunteer</a>
-            <a href="">About Us</a>
-          </div>
+        <div class="copyright">
+          <p>Name © 2023 Inc. All Rights Reserved.</p>
         </div>
-        <div class="footer_links">
-          <h2>About Us</h2>
-          <div class="footer_linkss">
-            <a href="">How it Works?</a>
-            <a href="">Contact Us</a>
-            <a href="">FAQ</a>
-            <a href="">Help</a>
-          </div>
-        </div>
-        <div class="contactinfo_div">
-          <h2>Contact Info</h2>
-          <div class="contact_info">
-            <div class="bggreen">
-              <i class="fa-solid fa-phone"></i>
-            </div>
-            <div class="text_info">
-              <p class="bold_text">Call Us</p>
-              <p class="simple_text">+1-0000000000</p>
-            </div>
-          </div>
-          <div class="contact_info">
-            <div class="bggreen">
-              <i class="fa-solid fa-envelope"></i>
-            </div>
-            <div class="text_info">
-              <p class="bold_text">Mail Us</p>
-              <p class="simple_text">info@******.com</p>
-            </div>
-          </div>
-          <div class="contact_info">
-            <div class="bggreen">
-              <i class="fa-solid fa-location-dot"></i>
-            </div>
-            <div class="text_info">
-              <p class="bold_text">Visit us</p>
-              <p class="simple_text">Your Address here</p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="copyright">
-        <p>Name © 2023 Inc. All Rights Reserved.</p>
-      </div>
-    </footer>
+      </footer>
+    </main>
     <script src="../../static/js/script.js"></script>
-  </body>
+</body>
+
 </html>
