@@ -1,5 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Outfit:wght@200;300&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Rubik:wght@600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Sora:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@200;300&display=swap");
+
 :root {
   --primary: #1b9274;
   --secondary: #5fb39e;
@@ -21,6 +24,10 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+main{
+  max-width: 1600px;
+  margin: 0 auto; /* Center the container horizontally */
 }
 .topdiv {
   padding: 15px 90px;
@@ -53,11 +60,13 @@ nav {
   justify-content: space-between;
   align-items: center;
 }
-nav p {
+nav a,
+.navflex a {
   font-size: 24px;
   font-weight: 600;
   font-family: var(--fontfamily);
   color: var(--primary);
+  text-decoration: none;
 }
 nav ul,
 nav ul li,
@@ -77,7 +86,7 @@ nav ul li a,
   font-family: var(--fontfamily);
   cursor: pointer;
 }
-nav ul li .navbtn {
+nav ul li a .navbtn {
   padding: 10px 20px;
   font-size: 16px;
   font-weight: 400;
@@ -86,6 +95,10 @@ nav ul li .navbtn {
   border-radius: 5px;
   border: 1px solid var(--primary);
   background-color: transparent;
+}
+nav ul li a .navbtn:hover {
+  background-color: var(--primary);
+  color: var(--primarybg);
 }
 .dropdown {
   position: relative;
@@ -99,6 +112,14 @@ nav ul li .navbtn {
   color: var(--primary);
   border: none;
   cursor: pointer;
+}
+.dropdown button svg {
+  font-size: 12px;
+  font-weight: 500;
+}
+.accordion_menu button svg {
+  font-size: 12px;
+  font-weight: 500;
 }
 .dropdown-content {
   display: none;
@@ -176,6 +197,11 @@ nav ul li .navbtn {
   font-weight: 500;
   padding: 20px 40px 20px 40px;
 }
+.herobtn:hover {
+  background-color: var(--primarybg);
+  color: var(--primary);
+  border: 1px solid var(--primary);
+}
 .rightdiv .main_card_div {
   position: relative;
   z-index: 9;
@@ -200,7 +226,7 @@ nav ul li .navbtn {
 }
 .mainbtn {
   border: none;
-  border-radius: 10px 10px 0px 10px;
+  border-radius: 8px 8px 0px 8px;
   background-color: var(--primary);
   color: white;
   font-size: 16px;
@@ -208,6 +234,12 @@ nav ul li .navbtn {
   font-weight: 500;
   padding: 10px 20px;
   margin-bottom: 15px;
+}
+.mainbtn:hover {
+  background-color: var(--primarybg);
+  color: var(--primary);
+  border: 1px solid var(--primary);
+  transition: all cubic-bezier(0.55, 0.055, 0.675, 0.19) 2ms;
 }
 .textdiv {
   display: flex;
@@ -427,7 +459,7 @@ nav ul li .navbtn {
   color: var(--simpletext);
 }
 
-.buttondiv .mainbtn {
+.buttondiv a .mainbtn {
   border: none;
   border-radius: 10px 10px 0px 10px;
   background-color: var(--primary);
@@ -437,6 +469,16 @@ nav ul li .navbtn {
   font-weight: 500;
   padding: 10px 10px;
 }
+.buttondiv a {
+  text-decoration: none;
+  color: var(--primarybg);
+}
+.buttondiv .mainbtn:hover {
+  background-color: var(--primarybg);
+  color: var(--primary);
+  border: 1px solid var(--primary);
+}
+
 .buttondiv .simplebtn {
   border: none;
   background-color: white;
@@ -585,7 +627,37 @@ nav ul li .navbtn {
   font-weight: 500;
   padding: 10px 20px;
 }
+.inputsect button:hover {
+  background-color: var(--primarybg);
+  color: var(--primary);
+  border: 1px solid var(--primary);
+}
+dialog {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border:1px solid var(--primary);
+  padding: 40px;
+}
+::backdrop{
+backdrop-filter: blur(10px);
+}
+.dialog_content{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+.dialog_content h1{
+  font-size: 18px;
+  font-weight: 600;
+  font-family: var(--fontfamily);
 
+
+}
 /* Testimonial Section */
 .testimonialsection {
   background-color: var(--secondarybg);
@@ -794,7 +866,7 @@ nav ul li .navbtn {
 }
 
 .accordion-header {
-    position: relative;
+  position: relative;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -802,7 +874,8 @@ nav ul li .navbtn {
   cursor: pointer;
   user-select: none;
   border-radius: 5px;
-  background-color: #f5f5f5; /* Default background color when closed */z-index: 10;
+  background-color: #f5f5f5; /* Default background color when closed */
+  z-index: 10;
 }
 .accordion-header .main_head {
   font-size: 20px;
@@ -952,6 +1025,436 @@ nav ul li .navbtn {
   line-height: 22px;
   letter-spacing: 0em;
   text-align: center;
+}
+/* Contact Us */
+
+.contactus_div {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 10px;
+}
+.contact_form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  justify-content: flex-start;
+}
+.contactpart {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+.contactpart label {
+  font-family: "Work Sans", sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 28px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+.contactpart input,.contactpart textarea {
+  width: 100%;
+  padding: 10px;
+  border: 2px solid #3c3c432e;
+  border-radius: 10px 10px 0px 10px;
+}
+
+.text_part h4 {
+  font-size: 20px;
+  font-weight: 800;
+  font-family: var(--fontfamily);
+  line-height: 22px;
+  color: var(--primarytext);
+}
+
+.text_part p {
+  font-size: 20px;
+  font-weight: 400;
+  font-family: var(--fontfamily);
+  line-height: 22px;
+  color: #727272;
+}
+
+.contactpart .text_part {
+  display: flex;
+  flex-direction: column;
+}
+
+.cardsdiv {
+  display: flex;
+  z-index: 20 !important;
+}
+
+
+.cardsect {
+  position: relative;
+  overflow: hidden;
+}
+
+.cards_div .quotes {
+  font-family: "Sora", sans-serif;
+  font-size: 80px;
+  font-weight: 600;
+  line-height: 80px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: var(--primary);
+}
+
+.cards_div .cardtext_head {
+  font-family: "Sora", sans-serif;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 35px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: var(--primarytext);
+}
+
+.cards_div .cardtext_para {
+  margin-bottom: 30px;
+  font-family: "Work Sans", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: #454545;
+}
+
+.cards_div {
+  background-color: #ffffff;
+  z-index: 9999 !important;
+  padding: 10px;
+  border: 1px solid #00725e;
+}
+
+
+.mainflex .flex_part h4 {
+  font-family: "Sora", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 36px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: #454545;
+}
+
+.mainflex .flex_part p {
+  font-family: "Work Sans", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: #454545;
+}
+
+.mainflex .flex_part {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0px;
+}
+
+.padd {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* Our Campaign Page */
+
+.Campaignbg {
+  display: flex;
+  background-image: url(../media/map.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.Campaignbg .Campaigntext h1 {
+  font-family: var(--specialfont);
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 57px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+.Campaignbg .Campaigntext h1 span {
+  color: var(--primary);
+}
+
+.headflex {
+  display: flex;
+  margin-bottom: 20px;
+}
+.brr {
+  border-right: 2px solid var(--primary);
+}
+.mainheading {
+  padding: 0px 10px;
+  color: var(--primary);
+}
+
+.mainCardUpper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  column-gap: 20px;
+  row-gap: 20px;
+}
+.card {
+  position: relative;
+}
+.cardservice {
+  background-color: var(--primarybg);
+  box-shadow: 0px 4px 12px 0px #00c89c4d;
+  border-radius: 10px;
+  padding: 20px;
+  z-index: 10;
+}
+.card:hover{
+  transform: translateY(-10px);
+}
+.bgbox {
+  width: 90%;
+  height: 90%;
+  position: absolute;
+  right: -5px;
+  bottom: -5px;
+  background-color: var(--primary);
+  border-radius: 10px;
+  z-index: -10;
+}
+.smalldiv {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f2f2f2;
+  padding: 10px;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+}
+
+.viewButton {
+  background-color: var(--primary);
+  color: white;
+  cursor: pointer;
+  padding: 10px 25px;
+  border: none;
+  border-radius: 10px 10px 0px 10px;
+}
+.viewButton:hover {
+  background-color: var(--primarybg);
+  color: var(--primary);
+  border: 1px solid var(--primary);
+  transition: 0.3s;
+}
+.title {
+  margin-top: 10px;
+  margin-bottom: 0px;
+}
+
+.buttonupper {
+  display: flex;
+  justify-content: end;
+}
+
+.card_para {
+  font-size: 14px;
+  font-weight: 500;
+  font-family: var(--fontfamily);
+  line-height: 24px;
+  margin-top: 11px;
+}
+.aboutus {
+  position: relative;
+  display: flex;
+  overflow-x: hidden;
+}
+.left_about,
+.right_about {
+  position: relative;
+}
+.right_imgsect {
+  position: absolute;
+  right: -3%;
+  top: 35% !important;
+  width: 200px;
+  height: 250px;
+  background-image: url(../media/Group\ 8.png);
+  background-repeat: no-repeat;
+  background-size: 200px 250px;
+  z-index: 0;
+}
+.left_imgsect {
+  position: absolute;
+  left: -5%;
+  bottom: 15% !important;
+  width: 200px;
+  height: 250px;
+  background-image: url(../media/Group\ 10.png);
+  background-repeat: no-repeat;
+  background-size: 200px 250px;
+  z-index: 0;
+  padding-bottom: 10rem;
+}
+
+.main_innerdiv {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+.inner_div {
+  background: url(../media/Group383.png) no-repeat;
+  background-size: cover;
+}
+.right_about {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+.main_headp {
+  color: #00725e;
+  font-family: "Sora", sans-serif;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 36px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+.main_headd {
+  color: #000504;
+  font-family: "Sora", sans-serif;
+  font-weight: 600;
+  line-height: 58px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+.small_text {
+  color: #454545;
+  font-family: "Work Sans", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+.flex_div {
+  display: flex;
+  border: 2px solid var(--primary);
+  margin-bottom: 10px;
+}
+.left_side {
+  width: 50%;
+}
+.right_side {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  align-items: end;
+}
+.text_head {
+  color: #000504;
+  font-family: "Work Sans", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+.price_text {
+  color: #000504;
+  font-family: "Sora", sans-serif;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 30px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+.donatebtn {
+  border: none;
+  border-radius: 10px 10px 0px 10px;
+  background-color: var(--primary);
+  color: white;
+  font-size: 16px;
+  font-family: var(--fontfamily);
+  font-weight: 500;
+  padding: 10px 25px;
+}
+.donatebtn:hover {
+  background-color: var(--primarybg);
+  color: var(--primary);
+  border: 1px solid var(--primary);
+}
+/* Donate Now Page */
+.modal {
+  background-color: var(--primarybg);
+  margin: 20px 0px;
+  width: 100%;
+}
+
+.modalform h2 {
+  color: var(--primary);
+  font-family: "Work Sans", sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 42px;
+  letter-spacing: 0em;
+  text-align: left;
+  margin-bottom: 20px;
+}
+.main_form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.input_flex {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.input_flex label {
+  font-family: "Work Sans", sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 28px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+.input_flex input {
+  width: 100%;
+  padding: 10px;
+  border: 2px solid #3c3c432e;
+  border-radius: 10px 10px 0px 10px;
+}
+
+.short_inputs {
+  width: 100%;
+  display: flex;  
+}
+.short_inputs .input_flex{
+  width: 100%;
+}
+.main_form p {
+  font-family: "Work Sans", sans-serif;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 28px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+
+.main_form p span {
+  color: var(--primary);
 }
 
 /* Responsivenes */
@@ -1158,8 +1661,167 @@ nav ul li .navbtn {
     gap: 20px;
   }
 
+  /* COntact Us Page */
+  .contactus {
+    padding: 20px 20px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .img_div {
+    width: 100%;
+  }
+  .img_div img {
+    width: 100%;
+  }
+  .contactus_div {
+    padding: 0px 10px;
+  }
+  .contactus_div {
+    width: 100%;
+  }
+  .cardsect {
+    padding: 40px 20px;
+  }
+  .cardsdiv {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  .mainflex {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+  }
+
+  /* Our Campaign Page */
+  .Campaignbg {
+    padding: 40px 20px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .Campaigntext {
+    width: 100%;
+  }
+  .Campaign_img,
+  .Campaign_img img {
+    width: 100%;
+  }
+  .cardsection {
+    padding: 20px 20px;
+  }
+  .aboutus {
+    padding: 60px 20px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+  }
+  .left_about {
+    padding: 0px 20px;
+  }
+  .flex_div {
+    padding: 5px 0px;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .left_about,
+  .right_about {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 90%;
+  }
+
+  .main_innerdiv {
+    position: relative;
+    display: flex;
+    justify-content: center;
+  }
+  .inner_div {
+    background: url(../media/Group383.png) no-repeat;
+    background-size: 215px 380px;
+    width: 215px;
+    height: 380px;
+  }
+  .upperimg {
+    position: absolute;
+    width: 150px;
+    height: 190px;
+    top: -25px;
+    left: -50px;
+    z-index: 10;
+  }
+  .lowerimg {
+    position: absolute;
+    width: 150px;
+    height: 190px;
+    right: -50px;
+    bottom: -25px;
+    z-index: 10;
+  }
+  .main_headd {
+    font-size: 32px;
+  }
+  .left_side {
+    border-bottom: 1px solid var(--primary);
+  }
+  .left_side,
+  .right_side {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .donatebtn {
+    width: 60%;
+  }
+
+  /* DOnate Page CSS */
+  .short_inputs{flex-direction: column;
+    gap:10px}
+    .modal{
+    padding: 20px;
+    }
+}
+
+@media screen and (min-width: 375px) {
+  .inner_div {
+    background: url(../media/Group383.png) no-repeat;
+    background-size: 245px 380px;
+    width: 245px;
+    height: 380px;
+  }
+  .donatebtn {
+    width: 50%;
+  }
+}
+@media screen and (min-width: 425px) {
+  .inner_div {
+    background: url(../media/Group383.png) no-repeat;
+    background-size: 245px 380px;
+    width: 245px;
+    height: 380px;
+  }
+  .donatebtn {
+    width: 40%;
+  }
 }
 @media screen and (min-width: 768px) {
+  /*  DOnate Now  Page*/
+  .modal{
+    padding: 20px 40px;
+    }
+    .short_inputs{
+      flex-direction: row;
+      gap: 40px;
+    }
+    /* HomePage */
   .accordion_menu {
     display: none;
   }
@@ -1260,8 +1922,111 @@ nav ul li .navbtn {
   .accordion {
     width: 700px;
   }
+  /* contact us page */
+  .cardsdiv {
+    gap: 10px;
+  }
+
+  .contactus {
+    padding: 80px 40px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .contactus_div {
+    padding: 0px 10px;
+  }
+  .cardsect {
+    padding: 80px 30px;
+  }
+  .cardsdiv {
+    display: flex;
+    flex-direction: row;
+  }
+  .mainflex {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  /* Our Campaign Page */
+  .Campaignbg {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .Campaignbg,
+  .aboutus {
+    padding: 80px 40px;
+  }
+  .aboutus {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .cardsection {
+    padding: 40px 30px;
+  }
+  .card {
+    width: 45%;
+  }
+  .flex_div {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .main_innerdiv {
+    position: relative;
+  }
+  .left_about,
+  .right_about {
+    display: flex;
+    justify-content: center;
+    width: 90%;
+    padding: 0px 40px;
+  }
+  .inner_div {
+    background: url(../media/Group383.png) no-repeat;
+    background-size: 280px 380px;
+    width: 280px;
+    height: 380px;
+  }
+  .upperimg {
+    position: absolute;
+    width: 200px;
+    height: 265px;
+    top: -50px;
+    left: 55px;
+    z-index: 10;
+  }
+  .lowerimg {
+    position: absolute;
+    width: 200px;
+    height: 265px;
+    right: 50px;
+    bottom: -25px;
+    z-index: 10;
+  }
+  .left_side {
+    border-bottom: none;
+    border-right: 1px solid var(--primary);
+  }
+  .donatebtn {
+    width: 30%;
+  }
+
+
+
 }
 @media screen and (min-width: 1024px) {
+ /*  DOnate Now  Page*/
+ .modal{
+  padding: 20px 80px;
+  }
+  /* homepage */
   nav {
     padding: 20px 80px;
     justify-content: space-between;
@@ -1326,8 +2091,94 @@ nav ul li .navbtn {
     display: flex;
     gap: 20px;
   }
+  /* contact us page */
+  .cardsdiv {
+    gap: 20px;
+  }
+
+  .contactus {
+    padding: 80px 80px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .contactus_div {
+    padding: 0px 10px;
+  }
+  .mainflex {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    gap: 10px;
+  }
+
+  .cardsect {
+    padding: 80px 40px;
+  }
+
+  /* Our Campaign Page  */
+  .Campaignbg {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .Campaignbg,
+  .aboutus {
+    padding: 80px 80px;
+  }
+  .aboutus {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+  .cardsection {
+    padding: 40px 60px;
+  }
+  .card {
+    width: 30%;
+  }
+  .inner_div {
+    background: url(../media/Group383.png) no-repeat;
+    background-size: 305px 435px;
+    width: 305px;
+    height: 435px;
+  }
+  .left_about {
+    width: 45%;
+    display: block;
+    padding: 0px;
+  }
+  .right_about {
+    width: 45%;
+    padding: 0px 10px;
+  }
+  .upperimg {
+    position: absolute;
+    width: 205px;
+    height: 290px;
+    top: -73px;
+    left: -40px;
+    z-index: 10;
+  }
+  .lowerimg {
+    position: absolute;
+    width: 205px;
+    height: 290px;
+    right: -20px;
+    bottom: -35px;
+    z-index: 10;
+  }
+
+  .donatebtn {
+    width: 40%;
+  }
 }
 @media screen and (min-width: 1440px) {
+  /*  DOnate Now  Page*/
+  .modal{
+    padding: 20px 120px;
+    }
+    /* HomePage */
   nav {
     padding: 20px 120px;
   }
@@ -1359,5 +2210,73 @@ nav ul li .navbtn {
   }
   .footer_links {
     width: 16.65%;
+  }
+
+  /* COntact Us page */
+
+  .cardsdiv {
+    gap: 30px;
+  }
+
+  .contactus {
+    padding: 80px 120px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .contactus_div {
+    padding: 0px 40px;
+  }
+  .mainflex {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    gap: 10px;
+  }
+
+  .cardsect {
+    padding: 80px 60px;
+  }
+  /* Our Campaign Page */
+  .Campaignbg {
+    flex-direction: row;
+  }
+  .Campaignbg,
+  .aboutus {
+    padding: 80px 120px;
+  }
+  .card {
+    width: 30%;
+  }
+  .left_about {
+    width: 45%;
+    display: block;
+    padding: 0px 60px;
+  }
+  .inner_div {
+    background: url(../media/Group383.png) no-repeat;
+    background-size: 325px 435px;
+    width: 330px;
+    height: 435px;
+  }
+  .upperimg {
+    position: absolute;
+    width: 268px;
+    height: 310px;
+    top: -76px;
+    left: -100px;
+    z-index: 10;
+  }
+  .lowerimg {
+    position: absolute;
+    width: 268px;
+    height: 310px;
+    right: -72px;
+    bottom: -40px;
+    z-index: 10;
+  }
+
+  .donatebtn {
+    width: 30%;
   }
 }

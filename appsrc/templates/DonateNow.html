@@ -10,117 +10,76 @@
       rel="stylesheet"
       type="text/css"
     />
-    <link rel="stylesheet" href="{% static '/css/hompage.css' %}" />
-
-    <link rel="stylesheet" href="{% static '/css/donatenow.css' %}" />
-
+    <link rel="stylesheet" href="{% static '/css/index.css' %}" />
     <!-- One file includes all the Font Awesome Free icons and utilities -->
     <script src="{% static 'fontawesomefree/js/all.min.js' %}"></script>
   </head>
-  <body style="padding: 20px">
-    <div class="modal" id="cardModal">
-      <div class="modalform">
-        <h2>Card Payment | Add your card to Donate</h2>
-        <form class="main_form">
-          <div class="input_flex">
-            <label for="Name">Name on card</label>
-            <input type="text" name="Name" />
-          </div>
-
-          <div class="input_flex">
-            <label for="Number">Card Number</label>
-            <input type="number" name="Number" />
-          </div>
-
-          <div class="short_inputs">
+  <body>
+    
+    {% include 'components/header.html'%}
+    <main>
+      <div class="modal" id="cardModal">
+        <div class="modalform">
+          <h2>Card Payment | Add your card to Donate</h2>
+          <form class="main_form">
             <div class="input_flex">
-              <label for="Number">Expiration Month</label>
+              <label for="Name">Name on card</label>
+              <input type="text" name="Name" />
+            </div>
+
+            <div class="input_flex">
+              <label for="Number">Card Number</label>
               <input type="number" name="Number" />
             </div>
 
-            <div class="input_flex">
-              <label for="Number">Expiration Year</label>
-              <input type="number" name="Number" />
-            </div>
-          </div>
+            <div class="short_inputs">
+              <div class="input_flex">
+                <label for="Number">Expiration Month</label>
+                <input type="number" name="Number" />
+              </div>
 
-          <div class="short_inputs">
-            <div class="input_flex">
-              <label for="Number">CVV</label>
-              <input type="number" name="Number" />
-            </div>
-
-            <div class="input_flex">
-              <label for="Number">Billing Zip Code</label>
-              <input type="number" name="Number" />
-            </div>
-          </div>
-
-          <div class="short_inputs">
-            <div class="input_flex">
-              <label for="City">City</label>
-              <input type="text" name="City" />
+              <div class="input_flex">
+                <label for="Number">Expiration Year</label>
+                <input type="number" name="Number" />
+              </div>
             </div>
 
-            <div class="input_flex">
-              <label for="State">State</label>
-              <input type="text" name="Number" />
+            <div class="short_inputs">
+              <div class="input_flex">
+                <label for="Number">CVV</label>
+                <input type="number" name="Number" />
+              </div>
+
+              <div class="input_flex">
+                <label for="Number">Billing Zip Code</label>
+                <input type="number" name="Number" />
+              </div>
             </div>
-          </div>
-          <p>
-            By continuing, I allow Charity Organization to save my payment
-            instrument information for future transactions pursuant to the
-            <span>payment Terms for Services </span>
-          </p>
-          <div>
-            <button class="mainbtn">Save</button>
-          </div>
-        </form>
+
+            <div class="short_inputs">
+              <div class="input_flex">
+                <label for="City">City</label>
+                <input type="text" name="City" />
+              </div>
+
+              <div class="input_flex">
+                <label for="State">State</label>
+                <input type="text" name="Number" />
+              </div>
+            </div>
+            <p>
+              By continuing, I allow Charity Organization to save my payment
+              instrument information for future transactions pursuant to the
+              <span>payment Terms for Services </span>
+            </p>
+            <div>
+              <button class="mainbtn">Save</button>
+            </div>
+          </form>
+        </div>
       </div>
-      <!--     
-    <button onclick="closeModal('cardModal')">Close Modal</button> -->
-    </div>
-    <div class="modal" id="bankModal">
-      <div class="modalform">
-        <h2>Bank Payment | Add your bank accout to Donate</h2>
-        <form class="main_form">
-          <div class="input_flex">
-            <label for="ACCName">Account Name</label>
-            <input type="text" name="ACCName" />
-          </div>
+    </main>
 
-          <div class="input_flex">
-            <label for="ACCNumber">Account Number</label>
-            <input type="number" name="ACCNumber" />
-          </div>
-          <div class="input_flex">
-            <label for="BankName">Bank Name</label>
-            <input type="number" name="BankName" />
-          </div>
-
-          <div class="short_inputs">
-            <div class="input_flex">
-              <label for="City">City</label>
-              <input type="text" name="City" />
-            </div>
-
-            <div class="input_flex">
-              <label for="State">State</label>
-              <input type="text" name="Number" />
-            </div>
-          </div>
-          <p>
-            By continuing, I allow Charity Organization to save my payment
-            instrument information for future transactions pursuant to the
-            <span>payment Terms for Services </span>
-          </p>
-          <div>
-            <button class="mainbtn">Save</button>
-          </div>
-        </form>
-      </div>
-      <!--     
-    <button onclick="closeModal('cardModal')">Close Modal</button> -->
-    </div>
+    {% include 'components/footer.html'%}
   </body>
 </html>

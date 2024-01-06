@@ -10,99 +10,21 @@
       rel="stylesheet"
       type="text/css"
     />
-    <link rel="stylesheet" href="{% static '/css/hompage.css' %}" />
+    <link rel="stylesheet" href="{% static '/css/index.css' %}" />
 
-    <link rel="stylesheet" href="{% static '/css/ourcampaign.css' %}" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
 
     <!-- One file includes all the Font Awesome Free icons and utilities -->
     <script src="{% static 'fontawesomefree/js/all.min.js' %}"></script>
   </head>
   <body>
-    
-    <header>
-      <div class="topdiv">
-          <div class="address">
-              <span><i class="fa-solid fa-phone"></i>
-                  <p>+00000000000</p>
-              </span>
-              <span><i class="fa-regular fa-envelope"></i>
-                  <p>info@******.com</p>
-              </span>
-          </div>
-          <div class="sociallinks">
-              <a href=""><i class="fa-brands fa-twitter"></i></a>
-              <a href=""><i class="fa-brands fa-instagram"></i></a>
-              <a href=""><i class="fa-brands fa-facebook"></i></a>
-              <a href=""><i class="fa-brands fa-youtube"></i></a>
-          </div>
-      </div>
-      <nav>
-          <p>Logo</p>
-          <ul class="nav-linksmd">
-              <li>
-                  <div class="dropdown">
-                      <button>
-                          Who We are <i class="fa-solid fa-chevron-down"></i>
-                      </button>
-                      <div class="dropdown-content">
-                          <a href="#">Item 1</a>
-                          <a href="#">Item 2</a>
-                          <a href="#">Item 3</a>
-                      </div>
-                  </div>
-              </li>
-              <li><a href="{% url 'ourcompaign' %}">Our Campaign</a></li>
-              <li><a href="{% url 'news' %}">News</a></li>
-              <li><a href="{% url 'contactus' %}">Contact Us</a></li>
-              <li>
-                  <a href="{% url 'donatenow'%}">
-                      <button class="navbtn">
-                          Donate Now
-                          <i class="fa-solid fa-heart"></i></button></a>
-              </li>
-          </ul>
-          <div class="navbarsm">
-              <!-- Close button added to the menu -->
-              <div class="navflex">
-                  <p>Logo</p>
-                  <div class="close-btn" onclick="toggleMenu()">
-                      <i class="fa-solid fa-close"></i>
-                  </div>
-              </div>
+    {% include 'components/header.html'%}
 
-              <ul class="nav-list">
-                  <li>
-                      <div class="accordion_menu">
-                          <button class="accordion-btn">
-                              Who We are <i class="fa-solid fa-chevron-down"></i>
-                          </button>
-                          <div class="accordion-content">
-                              <a href="#">Item 1</a>
-                              <a href="#">Item 2</a>
-                              <a href="#">Item 3</a>
-                          </div>
-                      </div>
-
-
-                  </li>
-                  <li><a href="{% url 'ourcompaign' %}">Our Campaign</a></li>
-                  <li><a href="{% url 'news' %}">News</a></li>
-                  <li><a href="{% url 'contactus' %}">Contact Us</a></li>
-                  <li>
-                      <a href="{% url 'donatenow'%}">
-                          <button class="navbtn">
-                              Donate Now
-                              <i class="fa-solid fa-heart"></i></button></a>
-                  </li>
-              </ul>
-          </div>
-          <div class="menu-toggle">&#9776;</div>
-      </nav>
-  </header>
     <main>
       <section class="Campaignbg">
         <div class="Campaigntext">
-          <h1>
+          <h1 data-aos="fade-left" data-aos-offset="200"
+          data-aos-easing="ease-in-out">
             You can help lots of <span>people</span> by donating little..​
           </h1>
         </div>
@@ -110,7 +32,7 @@
           <img src="../../static/media/bro.svg" alt="" />
         </div>
       </section>
-        <section class="cardsection">
+      <section class="cardsection">
         <div class="mainLayer">
           <div class="headflex">
             <h2 class="mainheading brr">Services</h2>
@@ -222,7 +144,7 @@
           </div>
         </div>
       </section>
-       <section class="aboutus">
+      <section class="aboutus">
         <div class="right_imgsect"></div>
         <div class="left_imgsect"></div>
         <div class="left_about">
@@ -242,7 +164,9 @@
         </div>
         <div class="right_about">
           <p class="main_headp">About Us</p>
-          <h1 class="main_headd">Lorem ipsum dolor sit amet consectetur.</h1>
+          <h1 data-aos="fade-right" data-aos-offset="200"
+          data-aos-easing="ease-in-out"
+           class="main_headd" >Lorem ipsum dolor sit amet consectetur.</h1>
           <p class="small_text">
             Lorem ipsum dolor sit amet consectetur. Magna mauris vitae ipsum
             augue ultrices nulla neque. Amet nec odio enim amet sit id orci.
@@ -261,80 +185,16 @@
               <p class="price_text">$34,000</p>
             </div>
           </div>
-          <button class="donatebtn"> Donate Now</button>
+          <button class="donatebtn">Donate Now</button>
         </div>
-      </section> 
+      </section>
     </main>
-    <footer>
-      <div class="footer_main">
-        <div class="logo_div">
-          <h2>Logo</h2>
-          <p>
-            Whatever it is that you care about, there will be a charity working
-            on it. Charities help in lots of different ways
-          </p>
-          <div class="sociallinks">
-            <a href=""><i class="fa-brands fa-twitter"></i></a>
-            <a href=""><i class="fa-brands fa-instagram"></i></a>
-            <a href=""><i class="fa-brands fa-facebook"></i></a>
-            <a href=""><i class="fa-brands fa-youtube"></i></a>
-          </div>
-        </div>
-        <div class="footer_links">
-          <h2>Menu</h2>
-          <div class="footer_linkss">
-            <a href="">Donations</a>
-            <a href="">Features</a>
-            <a href="">Categories</a>
-            <a href="">Volunteer</a>
-            <a href="">About Us</a>
-          </div>
-        </div>
-        <div class="footer_links">
-          <h2>About Us</h2>
-          <div class="footer_linkss">
-            <a href="">How it Works?</a>
-            <a href="">Contact Us</a>
-            <a href="">FAQ</a>
-            <a href="">Help</a>
-          </div>
-        </div>
-        <div class="contactinfo_div">
-          <h2>Contact Info</h2>
-          <div class="contact_info">
-            <div class="bggreen">
-              <i class="fa-solid fa-phone"></i>
-            </div>
-            <div class="text_info">
-              <p class="bold_text">Call Us</p>
-              <p class="simple_text">+1-0000000000</p>
-            </div>
-          </div>
-          <div class="contact_info">
-            <div class="bggreen">
-              <i class="fa-solid fa-envelope"></i>
-            </div>
-            <div class="text_info">
-              <p class="bold_text">Mail Us</p>
-              <p class="simple_text">info@******.com</p>
-            </div>
-          </div>
-          <div class="contact_info">
-            <div class="bggreen">
-              <i class="fa-solid fa-location-dot"></i>
-            </div>
-            <div class="text_info">
-              <p class="bold_text">Visit us</p>
-              <p class="simple_text">Your Address here</p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="copyright">
-        <p>Name © 2023 Inc. All Rights Reserved.</p>
-      </div>
-    </footer> 
-    <script src="../../static/js/script.js">
-    </script>
+
+    {% include 'components/footer.html'%}
+    
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>AOS.init();</script>
+
+    <script src="../../static/js/script.js"></script>
   </body>
 </html>
