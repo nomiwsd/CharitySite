@@ -1,83 +1,116 @@
-
 <header>
-    <div class="topdiv">
-        <div class="address">
-            <span><i class="fa-solid fa-phone"></i>
-                <p>+00000000000</p>
-            </span>
-            <span><i class="fa-regular fa-envelope"></i>
-                <p>info@******.com</p>
-            </span>
-        </div>
-        <div class="sociallinks">
-            <a href=""><i class="fa-brands fa-twitter"></i></a>
-            <a href=""><i class="fa-brands fa-instagram"></i></a>
-            <a href=""><i class="fa-brands fa-facebook"></i></a>
-            <a href=""><i class="fa-brands fa-youtube"></i></a>
-        </div>
+  <div class="topdiv">
+    <div class="address">
+      <span
+        ><i class="fa-solid fa-phone"></i>
+        <p>+00000000000</p>
+      </span>
+      <span
+        ><i class="fa-regular fa-envelope"></i>
+        <p>info@******.com</p>
+      </span>
     </div>
-    <nav>
-        <a href="{% url 'Home' %}">Logo</a>
-        <ul class="nav-linksmd">
-            <li>
-                <div class="dropdown">
-                    <button>
-                        Who We are <i class="fa-solid fa-chevron-down"></i>
-                    </button>
-                    <div class="dropdown-content">
-                        <a href="#">Item 1</a>
-                        <a href="#">Item 2</a>
-                        <a href="#">Item 3</a>
-                    </div>
-                </div>
-            </li>
-            <li><a href="{% url 'ourcompaign' %}">Our Campaign</a></li>
-            <li><a href="{% url 'news' %}">News</a></li>
-            <li><a href="{% url 'contactus' %}">Contact Us</a></li>
-            <li>
-                <a href="{% url 'donatenow'%}">
-                    <button class="navbtn">
-                        Donate Now
-                        <i class="fa-solid fa-heart"></i></button></a>
-            </li>
-        </ul>
-        <div class="navbarsm">
-            <!-- Close button added to the menu -->
-            <div class="navflex">
-                
-        <a href="{% url 'Home' %}">Logo</a>
-                <div class="close-btn" onclick="toggleMenu()">
-                    <i class="fa-solid fa-close"></i>
-                </div>
-            </div>
-
-            <ul class="nav-list">
-                <li>
-                    <div class="accordion_menu">
-                        <button class="accordion-btn">
-                            Who We are <i class="fa-solid fa-chevron-down"></i>
-                        </button>
-                        <div class="accordion-content">
-                            <a href="#">Item 1</a>
-                            <a href="#">Item 2</a>
-                            <a href="#">Item 3</a>
-                        </div>
-                    </div>
-
-
-                </li>
-                <li><a href="{% url 'ourcompaign' %}">Our Campaign</a></li>
-                <li><a href="{% url 'news' %}">News</a></li>
-                <li><a href="{% url 'contactus' %}">Contact Us</a></li>
-                <li>
-                    <a href="{% url 'donatenow'%}">
-                        <button class="navbtn">
-                            Donate Now
-                            <i class="fa-solid fa-heart"></i></button></a>
-                </li>
-            </ul>
+    <div class="sociallinks">
+      <a href=""><i class="fa-brands fa-twitter"></i></a>
+      <a href=""><i class="fa-brands fa-instagram"></i></a>
+      <a href=""><i class="fa-brands fa-facebook"></i></a>
+      <a href=""><i class="fa-brands fa-youtube"></i></a>
+    </div>
+  </div>
+  <nav>
+    <a href="{% url 'Home' %}">Logo</a>
+    <ul class="nav-linksmd">
+      <li>
+        <div class="dropdown">
+          <button>Who We are <i class="fa-solid fa-chevron-down"></i></button>
+          <div class="dropdown-content">
+            <a href="#">Item 1</a>
+            <a href="#">Item 2</a>
+            <a href="#">Item 3</a>
+          </div>
         </div>
-        <div class="menu-toggle">&#9776;</div>
-    </nav>
+      </li>
+      <li><a href="{% url 'ourcompaign' %}">Our Campaign</a></li>
+      <li><a href="{% url 'news' %}">News</a></li>
+      <li><a href="{% url 'contactus' %}">Contact Us</a></li>
+      <li>
+        <button class="navbtn" id="Login_Btn">
+          Login
+          <i class="fa-solid fa-person"></i>
+        </button>
+        <dialog id="Login_Dialog" class="dialog_box">
+            <div class="dialog_header">
+                <h1>Login</h1>
+                <button class="close-button">
+                  <i class="fa-solid fa-close"></i>
+                </button>
+              </div>
+              <div class="dialog_content">
+                <div class="input_flex">
+                  <label for="Email">Email Address</label>
+                  <input type="email" name="Email" placeholder="Enter Your Email Address"/>
+                </div>
+                <div class="input_flex">
+                  <label for="Password">Password</label>
+                  <input type="password" name="Password" placeholder="Enter Your Password"/>
+                </div>
+                <div class="addbtndiv">
+                    <button class="mainbtn">Login </button>
+                  </div>    
+            </div>
+                
+              </div>
+        </dialog>
+      </li>
+    </ul>
+    <div class="navbarsm">
+      <!-- Close button added to the menu -->
+      <div class="navflex">
+        <a href="{% url 'Home' %}">Logo</a>
+        <div class="close-btn" onclick="toggleMenu()">
+          <i class="fa-solid fa-close"></i>
+        </div>
+      </div>
+
+      <ul class="nav-list">
+        <li>
+          <div class="accordion_menu">
+            <button class="accordion-btn">
+              Who We are <i class="fa-solid fa-chevron-down"></i>
+            </button>
+            <div class="accordion-content">
+              <a href="#">Item 1</a>
+              <a href="#">Item 2</a>
+              <a href="#">Item 3</a>
+            </div>
+          </div>
+        </li>
+        <li><a href="{% url 'ourcompaign' %}">Our Campaign</a></li>
+        <li><a href="{% url 'news' %}">News</a></li>
+        <li><a href="{% url 'contactus' %}">Contact Us</a></li>
+        <li>
+          <button class="navbtn" id="Login_btn">
+            Login
+            <i class="fa-solid fa-person"></i>
+          </button>
+        </li>
+      </ul>
+    </div>
+    <div class="menu-toggle">&#9776;</div>
+  </nav>
 </header>
 <script src="../../static/js/script.js"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const button = document.getElementById("Login_Btn");
+    const dialogbox = document.getElementById("Login_Dialog");
+
+    button.addEventListener("click", () => {
+      dialogbox.showModal();
+    });
+
+    dialogbox.querySelector(".close-button").addEventListener("click", () => {
+      dialogbox.close();
+    });
+  });
+</script>

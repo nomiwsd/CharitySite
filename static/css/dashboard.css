@@ -28,6 +28,9 @@
 
 /* Sidebar */
 .sidebar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   position: fixed;
   height: 100%;
   background: var(--primary);
@@ -37,6 +40,9 @@
 
 .sidebar .sidebar_links {
   margin-top: 20px;
+}
+.sidebar .sidebar_links {
+  margin-top: 70px;
 }
 .sidebar .sidebar_links li {
   position: relative;
@@ -59,8 +65,11 @@
   color: var(--primarybg);
   padding: 0px 10px;
 }
-
-.nav_logo p {
+.nav_logo {
+  margin-top: 10px;
+}
+.nav_logo a {
+  text-decoration: none;
   color: white;
   font-size: 18px;
   font-weight: 700;
@@ -95,7 +104,7 @@
 .home-section .dashboard_navbar {
   display: flex;
   justify-content: space-between;
-  height: 80px;
+  height: 60px;
   background: var(--primary);
   display: flex;
   align-items: center;
@@ -278,7 +287,8 @@
 }
 
 /* Recent funds table */
-.main_recent_fund_table {
+.main_recent_fund_table,
+.messages_table {
   padding: 10px 10px;
   width: 100%;
 }
@@ -330,7 +340,6 @@
   border-radius: 10px 10px 0px 10px;
 }
 .add_programs_div {
-  background-color: #3998801c;
   padding: 10px 15px;
 }
 .mainbtn {
@@ -342,12 +351,14 @@
   font-family: var(--fontfamily);
   font-weight: 500;
   padding: 10px 20px;
+  transition: 0.5s ease-in;
+  height: 50px;
+  box-sizing: border-box;
 }
 .mainbtn:hover {
   background-color: var(--primarybg);
   color: var(--primary);
-  border: 1px solid var(--primary);
-  transition: all cubic-bezier(0.55, 0.055, 0.675, 0.19) 2ms;
+  /* border: 1px solid var(--primary); */
 }
 dialog {
   position: fixed;
@@ -524,8 +535,8 @@ dialog {
   align-items: center;
   gap: 10px;
 }
-.file_upload input{
-    width: 100%;
+.file_upload input {
+  width: 100%;
 }
 .text_info {
   width: 100%;
@@ -577,7 +588,7 @@ dialog {
     display: none;
   }
 
-  .nav_logo p {
+  .nav_logo a {
     display: none;
   }
   .navbar_img p {
@@ -611,6 +622,15 @@ dialog {
   }
   .top_flex {
     flex-direction: column;
+    gap: 10px;
+  }
+  .tab-content {
+    display: none;
+    padding: 10px;
+  }
+
+  .active-content {
+    display: block;
   }
   .input_flex {
     flex-direction: column;
@@ -639,7 +659,7 @@ dialog {
   .sidebar_links li a span {
     display: flex;
   }
-  .nav_logo p {
+  .nav_logo a {
     display: flex;
   }
   .navbar_img p {
@@ -729,7 +749,7 @@ dialog {
   .recentactivity_box {
     width: 23%;
   }
-  
+
   .img_sect {
     padding: 20px 80px;
   }

@@ -24,168 +24,204 @@
           <div class="top_flex">
             <h1 class="Dash_head_p">Programs</h1>
             <div>
-                <button class="add_btn" id="addBtn">Add Program</button>
-                <dialog id="AddDialog" class="dialog_box">
-                    <div class="dialog_header">
-                        <h1>Add Program</h1>
-                        <button class="close-button">
-                            <i class="fa-solid fa-close"></i>
-                        </button>
+              <button class="add_btn" id="addBtn">Add Program</button>
+              <dialog id="AddDialog" class="dialog_box">
+                <div class="dialog_header">
+                  <h1>Add Program</h1>
+                  <button class="close-button">
+                    <i class="fa-solid fa-close"></i>
+                  </button>
+                </div>
+                <div class="dialog_content">
+                  <div class="input_flex">
+                    <label for="addtitle">Add Title</label>
+                    <input type="text" name="addtitle" />
+                  </div>
+                  <div class="input_flex">
+                    <label for="subtitle">Add Subtitle</label>
+                    <input type="text" name="subtitle" />
+                  </div>
+                  <div class="input_flex">
+                    <label for="adddesc">Add Description</label>
+                    <input type="text" name="adddesc" />
+                  </div>
+                  <div class="checkbox_flex">
+                    <label for="openprog">Open Program</label>
+                    <input type="checkbox" name="openprog" />
+                  </div>
+                  <div class="input_flex">
+                    <label for="addamount">Add Amount</label>
+                    <input type="text" name="addamount" />
+                  </div>
+                  <div class="addImage_flex">
+                    <label for="addamount">Add Image</label>
+                    <div class="uploadimg_div">
+                      <button class="mainbtn">Upload Image</button>
                     </div>
-                    <div class="dialog_content">
-                      <div class="input_flex">
-                        <label for="addtitle">Add Title</label>
-                        <input type="text" name="addtitle">
-                      </div>
-                      <div class="input_flex">
-                        <label for="subtitle">Add Subtitle</label>
-                        <input type="text" name="subtitle">
-                      </div>
-                      <div class="input_flex">
-                        <label for="adddesc">Add Description</label>
-                        <input type="text" name="adddesc">
-                      </div>
-                      <div class="checkbox_flex">
-                        <label for="openprog">Open Program</label>
-                        <input type="checkbox" name="openprog">
-                      </div>
-                      <div class="input_flex">
-                        <label for="addamount">Add Amount</label>
-                        <input type="text" name="addamount">
-                      </div>
-                      <div class="addImage_flex">
-                        <label for="addamount">Add Image</label>
-                        <div class="uploadimg_div">
-                        <button class="mainbtn">Upload Image</button>
-                        </div>
-                        <div class="uploadimg_div">
-                            <button class="mainbtn">Upload Image</button></div>
-                      </div>
-                      <div class="addbtndiv">
-                        <button class="mainbtn">Add Programs</button>
-                      </div>
+                    <div class="uploadimg_div">
+                      <button class="mainbtn">Upload Image</button>
                     </div>
-                  </dialog>
+                  </div>
+                  <div class="addbtndiv">
+                    <button class="mainbtn">Add Programs</button>
+                  </div>
+                </div>
+              </dialog>
             </div>
           </div>
-          <div class="add_programs_div">
-            <div class="mainCardUpper">
-                <div class="card">
-                  <div class="bgbox"></div>
-                  <div class="cardservice">
-                    <div class="upper_sect">
-                      <div class="left_parrt">
-                        <div class="left_sidecontent">
-                          <h1>War In Afghanistan</h1>
-                          <p>
-                            Lorem Ipsum is simply dummy text of the printing and text
-                            of the printing and typesetting.
-                          </p>
+          <div class="top_flex">
+            <div>
+              <div id="navTabs">
+                <button onclick="showTab('activeTab')" id="activeBtn" class="mainbtn">Active</button>
+                <button onclick="showTab('closeTab')" id="closeBtn" class="mainbtn">Close</button>
+                <div id="activeTab" class="tab-content active-content">
+                  <div class="mainCardUpper">
+                    <div class="card">
+                      <div class="bgbox"></div>
+                      <div class="cardservice">
+                        <div class="upper_sect">
+                          <div class="left_parrt">
+                            <div class="left_sidecontent">
+                              <h1>War In Afghanistan</h1>
+                              <p>
+                                Lorem Ipsum is simply dummy text of the printing and
+                                text of the printing and typesetting.
+                              </p>
+                            </div>
+                            <div class="right_sidecontent">
+                              <h1>Location</h1>
+                              <p>Kundhare , Kabul</p>
+                            </div>
+                          </div>
+                          <div class="right_parrt">
+                            <button class="mainbtn">Close</button>
+                          </div>
                         </div>
-                        <div class="right_sidecontent">
-                          <h1>Location</h1>
-                          <p>Kundhare , Kabul</p>
+                        <hr class="hr_line" />
+                        <div class="lower_sect">
+                          <div class="left_side_content">
+                            <div class="card_flex">
+                              <h1>595+</h1>
+                              <p>Donation Received</p>
+                            </div>
+                            <div class="card_flex">
+                              <h1>48M</h1>
+                              <p>Money Donated</p>
+                            </div>
+                            <div class="card_flex">
+                              <h1>35+</h1>
+                              <p>Active Campaigns</p>
+                            </div>
+                            <div class="card_flex">
+                              <h1>N5000</h1>
+                              <p>Opened Charity</p>
+                            </div>
+                          </div>
+                          <div class="right_side_content">
+                            <h1>TOTAL COST</h1>
+                            <p>1.5 Million $</p>
+                          </div>
                         </div>
-                      </div>
-                      <div class="right_parrt">
-                        <button class="mainbtn">Donate</button>
                       </div>
                     </div>
-                    <hr class="hr_line" />
-                    <div class="lower_sect">
-                      <div class="left_side_content">
-                        <div class="card_flex">
-                          <h1>595+</h1>
-                          <p>Donation Received</p>
+                    <div class="card">
+                      <div class="bgbox"></div>
+                      <div class="cardservice">
+                        <div class="upper_sect">
+                          <div class="left_parrt">
+                            <div class="left_sidecontent">
+                              <h1>War In Afghanistan</h1>
+                              <p>
+                                Lorem Ipsum is simply dummy text of the printing and
+                                text of the printing and typesetting.
+                              </p>
+                            </div>
+                            <div class="right_sidecontent">
+                              <h1>Location</h1>
+                              <p>Kundhare , Kabul</p>
+                            </div>
+                          </div>
+                          <div class="right_parrt">
+                            <button class="mainbtn">Close</button>
+                          </div>
                         </div>
-                        <div class="card_flex">
-                          <h1>48M</h1>
-                          <p>Money Donated</p>
+                        <hr class="hr_line" />
+                        <div class="lower_sect">
+                          <div class="left_side_content">
+                            <div class="card_flex">
+                              <h1>595+</h1>
+                              <p>Donation Received</p>
+                            </div>
+                            <div class="card_flex">
+                              <h1>48M</h1>
+                              <p>Money Donated</p>
+                            </div>
+                            <div class="card_flex">
+                              <h1>35+</h1>
+                              <p>Active Campaigns</p>
+                            </div>
+                            <div class="card_flex">
+                              <h1>N5000</h1>
+                              <p>Opened Charity</p>
+                            </div>
+                          </div>
+                          <div class="right_side_content">
+                            <h1>TOTAL COST</h1>
+                            <p>1.5 Million $</p>
+                          </div>
                         </div>
-                        <div class="card_flex">
-                          <h1>35+</h1>
-                          <p>Active Campaigns</p>
-                        </div>
-                        <div class="card_flex">
-                          <h1>N5000</h1>
-                          <p>Opened Charity</p>
-                        </div>
-                      </div>
-                      <div class="right_side_content">
-                        <h1>TOTAL COST</h1>
-                        <p>1.5 Million $</p>
                       </div>
                     </div>
                   </div>
                 </div>
-                <div class="card">
-                  <div class="bgbox"></div>
-                  <div class="cardservice">
-                    <div class="upper_sect">
-                      <div class="left_parrt">
-                        <div class="left_sidecontent">
-                          <h1>War In Afghanistan</h1>
-                          <p>
-                            Lorem Ipsum is simply dummy text of the printing and text
-                            of the printing and typesetting.
-                          </p>
-                        </div>
-                        <div class="right_sidecontent">
-                          <h1>Location</h1>
-                          <p>Kundhare , Kabul</p>
-                        </div>
-                      </div>
-                      <div class="right_parrt">
-                        <button class="mainbtn">Donate</button>
-                      </div>
-                    </div>
-                    <hr class="hr_line" />
-                    <div class="lower_sect">
-                      <div class="left_side_content">
-                        <div class="card_flex">
-                          <h1>595+</h1>
-                          <p>Donation Received</p>
-                        </div>
-                        <div class="card_flex">
-                          <h1>48M</h1>
-                          <p>Money Donated</p>
-                        </div>
-                        <div class="card_flex">
-                          <h1>35+</h1>
-                          <p>Active Campaigns</p>
-                        </div>
-                        <div class="card_flex">
-                          <h1>N5000</h1>
-                          <p>Opened Charity</p>
-                        </div>
-                      </div>
-                      <div class="right_side_content">
-                        <h1>TOTAL COST</h1>
-                        <p>1.5 Million $</p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+              
+              <div id="closeTab" class="tab-content">
+                  <h2>Close Content</h2>
+                  <p>This is the content for the Close tab.</p>
               </div>
+              
+            </div>
+            </div>
+            
+          </div>
+          <div class="add_programs_div">
+            
           </div>
         </div>
       </section>
     </main>
-<script>
-    
-document.addEventListener("DOMContentLoaded", function () {
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const button = document.getElementById("addBtn");
+        const dialogbox = document.getElementById("AddDialog");
 
-const button = document.getElementById("addBtn");
-const dialogbox = document.getElementById("AddDialog");
+        button.addEventListener("click", () => {
+          dialogbox.showModal();
+        });
 
-button.addEventListener("click", () => {
-  dialogbox.showModal();
-});
+        dialogbox
+          .querySelector(".close-button")
+          .addEventListener("click", () => {
+            dialogbox.close();
+          });
+      });
+      function showTab(tabId) {
+        // Hide all tab contents
+        var tabContents = document.getElementsByClassName('tab-content');
+        for (var i = 0; i < tabContents.length; i++) {
+            tabContents[i].style.display = 'none';
+        }
 
-dialogbox.querySelector(".close-button").addEventListener("click", () => {
-  dialogbox.close();
-});
-})
-</script>
-</body>
+        // Show the selected tab content
+        document.getElementById(tabId).style.display = 'block';
+
+        // Update button styles based on the selected tab
+        document.getElementById('activeBtn').classList.toggle('active', tabId === 'activeTab');
+        document.getElementById('closeBtn').classList.toggle('active', tabId === 'closeTab');
+    }
+
+    // Initially show the 'activeTab' content
+    showTab('activeTab');
+    </script>
+  </body>
 </html>
