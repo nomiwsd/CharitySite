@@ -329,7 +329,6 @@
   font-family: var(--fontfamily);
   font-weight: 500;
   padding: 10px 20px;
-  margin-bottom: 15px;
 }
 .mainbtn:hover {
   background-color: var(--primarybg);
@@ -343,7 +342,7 @@ dialog {
   left: 50%;
   transform: translate(-50%, -50%);
   border: 1px solid var(--primary);
-  width: 565px;
+  width: 660px;
 }
 ::backdrop {
   backdrop-filter: blur(10px);
@@ -378,18 +377,17 @@ dialog {
   width: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
   gap: 10px;
 }
-.dialog_content .input_flex {
+.input_flex {
   display: flex;
   width: 100%;
   justify-content: space-between;
-  padding: 20px 20px;
+  padding: 10px 20px;
 }
-.input_flex label {
-  width: 100%;
+.input_flex label,
+.checkbox_flex label,
+.addImage_flex label {
   font-family: "Poppins", sans-serif;
   font-size: 16px;
   font-weight: 600;
@@ -398,10 +396,36 @@ dialog {
   text-align: left;
   color: #4a4949;
 }
-.input_flex input {
+.input_flex input[type="text"] {
   width: 100%;
   padding: 10px;
   border: 1px solid #1b927482;
+  border-radius: 5px;
+}
+.checkbox_flex {
+  padding: 10px 20px;
+  display: flex;
+  justify-content: flex-start;
+}
+.addImage_flex {
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+.uploadimg_div {
+  border: 1px solid #1b927482;
+  background-color: #fff;
+  padding: 45px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.addbtndiv {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  padding: 20px;
 }
 /* responsiveness */
 @media screen and (min-width: 320px) {
@@ -446,6 +470,19 @@ dialog {
   }
   .top_flex {
     flex-direction: column;
+  }
+  .input_flex {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .input_flex label,
+  .checkbox_flex label,
+  .addImage_flex label {
+    width: 100%;
+  }
+  .addImage_flex {
+    flex-direction: column;
+    align-items: flex-start;
   }
 }
 @media screen and (min-width: 768px) {
@@ -502,6 +539,19 @@ dialog {
   .top_flex {
     flex-direction: row;
   }
+
+  .input_flex {
+    flex-direction: row;
+    align-items: center;
+  }
+  .input_flex label,
+  .checkbox_flex label,
+  .addImage_flex label {
+    width: 35%;
+  }
+  
+  .addImage_flex{flex-direction: row;
+  align-items: center;}
 }
 @media screen and (min-width: 1024px) {
   .top_counters {
