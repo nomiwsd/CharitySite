@@ -1,0 +1,164 @@
+{% load static%}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      href="{% static 'fontawesomefree/css/all.min.css' %}"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link rel="stylesheet" href="{% static '/css/dashboard.css' %}" />
+    <link rel="stylesheet" href="{% static '/css/news.css' %}" />
+    <!-- One file includes all the Font Awesome Free icons and utilities -->
+    <script src="{% static 'fontawesomefree/js/all.min.js' %}"></script>
+  </head>
+  <body>
+    <main>
+      {% include 'components/sidebar.html'%}
+      <section class="home-section">
+        {% include 'components/dashboard_navbar.html'%}
+        <div class="home-content">
+          <div class="top_flex">
+            <h1 class="Dash_head_p">Programs</h1>
+            <div>
+                <button class="add_btn" id="addBtn">Add Program</button>
+                <dialog id="AddDialog" class="dialog_box">
+                    <div class="dialog_header">
+                        <h1>Add Program</h1>
+                        <button class="close-button">
+                            <i class="fa-solid fa-close"></i>
+                        </button>
+                    </div>
+                    <div class="dialog_content">
+                      <div class="input_flex">
+                        <label for="addtitle">Add Title</label>
+                        <input type="text" name="addtitle">
+                      </div>
+                    </div>
+                  </dialog>
+            </div>
+          </div>
+          <div class="add_programs_div">
+            <div class="mainCardUpper">
+                <div class="card">
+                  <div class="bgbox"></div>
+                  <div class="cardservice">
+                    <div class="upper_sect">
+                      <div class="left_parrt">
+                        <div class="left_sidecontent">
+                          <h1>War In Afghanistan</h1>
+                          <p>
+                            Lorem Ipsum is simply dummy text of the printing and text
+                            of the printing and typesetting.
+                          </p>
+                        </div>
+                        <div class="right_sidecontent">
+                          <h1>Location</h1>
+                          <p>Kundhare , Kabul</p>
+                        </div>
+                      </div>
+                      <div class="right_parrt">
+                        <button class="mainbtn">Donate</button>
+                      </div>
+                    </div>
+                    <hr class="hr_line" />
+                    <div class="lower_sect">
+                      <div class="left_side_content">
+                        <div class="card_flex">
+                          <h1>595+</h1>
+                          <p>Donation Received</p>
+                        </div>
+                        <div class="card_flex">
+                          <h1>48M</h1>
+                          <p>Money Donated</p>
+                        </div>
+                        <div class="card_flex">
+                          <h1>35+</h1>
+                          <p>Active Campaigns</p>
+                        </div>
+                        <div class="card_flex">
+                          <h1>N5000</h1>
+                          <p>Opened Charity</p>
+                        </div>
+                      </div>
+                      <div class="right_side_content">
+                        <h1>TOTAL COST</h1>
+                        <p>1.5 Million $</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="card">
+                  <div class="bgbox"></div>
+                  <div class="cardservice">
+                    <div class="upper_sect">
+                      <div class="left_parrt">
+                        <div class="left_sidecontent">
+                          <h1>War In Afghanistan</h1>
+                          <p>
+                            Lorem Ipsum is simply dummy text of the printing and text
+                            of the printing and typesetting.
+                          </p>
+                        </div>
+                        <div class="right_sidecontent">
+                          <h1>Location</h1>
+                          <p>Kundhare , Kabul</p>
+                        </div>
+                      </div>
+                      <div class="right_parrt">
+                        <button class="mainbtn">Donate</button>
+                      </div>
+                    </div>
+                    <hr class="hr_line" />
+                    <div class="lower_sect">
+                      <div class="left_side_content">
+                        <div class="card_flex">
+                          <h1>595+</h1>
+                          <p>Donation Received</p>
+                        </div>
+                        <div class="card_flex">
+                          <h1>48M</h1>
+                          <p>Money Donated</p>
+                        </div>
+                        <div class="card_flex">
+                          <h1>35+</h1>
+                          <p>Active Campaigns</p>
+                        </div>
+                        <div class="card_flex">
+                          <h1>N5000</h1>
+                          <p>Opened Charity</p>
+                        </div>
+                      </div>
+                      <div class="right_side_content">
+                        <h1>TOTAL COST</h1>
+                        <p>1.5 Million $</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+          </div>
+        </div>
+      </section>
+    </main>
+<script>
+    
+document.addEventListener("DOMContentLoaded", function () {
+
+const button = document.getElementById("addBtn");
+const dialogbox = document.getElementById("AddDialog");
+
+button.addEventListener("click", () => {
+  dialogbox.showModal();
+});
+
+dialogbox.querySelector(".close-button").addEventListener("click", () => {
+  dialogbox.close();
+});
+})
+</script>
+</body>
+</html>

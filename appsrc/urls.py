@@ -6,4 +6,9 @@ urlpatterns = [
     path('news/', views.news,name='news'),
     path('contactus/', views.contactus,name='contactus'),
     path('donatenow/', views.donatenow,name='donatenow'),
+    path('dashboard/', views.dashboard,name='dashboard'),
+    path('donationhistory/', views.donationhistory,name='donationhistory'),
+    path('recentfunds/', views.Recent_funds,name='recentfunds'),
+    path('programs/', views.Programs,name='programs'),
+    
 ]

@@ -11,3 +11,11 @@ def contactus(request):
     return render(request,'Contactus.html')
 def donatenow(request):
     return render(request,'DonateNow.html')
+def dashboard(request):
+    return render(request,'Dashboard.html')
+def donationhistory(request):
+    return render(request,'Donation_history.html')
+def Recent_funds(request):
+    return render(request,'Recent_funds.html')
+def Programs(request):
+    return render(request,'Programs.html')

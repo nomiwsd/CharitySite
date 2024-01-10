@@ -1,0 +1,79 @@
+{% load static%}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      href="{% static 'fontawesomefree/css/all.min.css' %}"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link rel="stylesheet" href="{% static '/css/dashboard.css' %}" />
+    <!-- One file includes all the Font Awesome Free icons and utilities -->
+    <script src="{% static 'fontawesomefree/js/all.min.js' %}"></script>
+  </head>
+  <body>
+    <main>
+      {% include 'components/sidebar.html'%}
+      <section class="home-section">
+        {% include 'components/dashboard_navbar.html'%}
+        <div class="home-content">
+          <h1 class="Dash_head">Recent Funds</h1>
+          <div class="table_div">
+            <table class="main_recent_fund_table">
+              <tr class="table_head">
+                <th class="br-right">ID No</th>
+                <th class="br-right">Payment Date</th>
+                <th class="br-right">Program</th>
+                <th>Payment Amount</th>
+              </tr>
+              <tr class="table_data">
+                <td class="br-right">#324145</td>
+                <td class="br-right">Dec,23,2023</td>
+                <td class="br-right">Zakah</td>
+                <td>$34,00</td>
+              </tr>
+              </tr>
+              <tr class="table_data">
+                <td class="br-right">#324145</td>
+                <td class="br-right">Dec,23,2023</td>
+                <td class="br-right">Zakah</td>
+                <td>$34,00</td>
+              </tr>
+              </tr>
+              <tr class="table_data">
+                <td class="br-right">#324145</td>
+                <td class="br-right">Dec,23,2023</td>
+                <td class="br-right">Zakah</td>
+                <td>$34,00</td>
+              </tr>
+              </tr>
+              <tr class="table_data">
+                <td class="br-right">#324145</td>
+                <td class="br-right">Dec,23,2023</td>
+                <td class="br-right">Zakah</td>
+                <td>$34,00</td>
+              </tr>
+              </tr>
+              <tr class="table_data">
+                <td class="br-right">#324145</td>
+                <td class="br-right">Dec,23,2023</td>
+                <td class="br-right">Zakah</td>
+                <td>$34,00</td>
+              </tr>
+              </tr>
+              <tr class="table_data">
+                <td class="br-right">#324145</td>
+                <td class="br-right">Dec,23,2023</td>
+                <td class="br-right">Zakah</td>
+                <td>$34,00</td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
