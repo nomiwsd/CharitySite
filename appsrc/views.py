@@ -19,3 +19,7 @@ def Recent_funds(request):
     return render(request,'Recent_funds.html')
 def Programs(request):
     return render(request,'Programs.html')
+def Messages(request):
+    return render(request,'Messages.html')
+def Profile(request):
+    return render(request,'Profile.html')

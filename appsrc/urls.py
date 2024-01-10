@@ -10,5 +10,7 @@ urlpatterns = [
     path('donationhistory/', views.donationhistory,name='donationhistory'),
     path('recentfunds/', views.Recent_funds,name='recentfunds'),
     path('programs/', views.Programs,name='programs'),
+    path('messages/', views.Messages,name='messages'),
+    path('profile/', views.Profile,name='profile'),
     
 ]

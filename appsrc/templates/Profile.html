@@ -1,0 +1,75 @@
+{% load static%}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      href="{% static 'fontawesomefree/css/all.min.css' %}"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link rel="stylesheet" href="{% static '/css/dashboard.css' %}" />
+    <!-- One file includes all the Font Awesome Free icons and utilities -->
+    <script src="{% static 'fontawesomefree/js/all.min.js' %}"></script>
+  </head>
+  <body>
+    <main>
+      {% include 'components/sidebar.html'%}
+      <section class="home-section">
+        {% include 'components/dashboard_navbar.html'%}
+        <div class="home-content">
+          <h1 class="main_head_green">User Name Profile</h1>
+          <div class="personal_info">
+            <div class="img_sect">
+              <div class="avatar_img"><img src="../../static/media/Profilepic.png" alt="" /></div>
+              <div class="file_upload">
+                <input
+                  type="file"
+                  id="avatar"
+                  name="avatar"
+                  accept="image/png, image/jpeg"
+                />
+                <button class="mainbtn">Upload Photo</button>
+              </div>
+            </div>
+            <div class="text_info">
+              <h1 class="Dash_head">Details</h1>
+              <div class="info_flex">
+                <h2>Name</h2>
+                <p>Admin</p>
+              </div>
+              <div class="info_flex">
+                <h2>Email</h2>
+                <p>Admin@gmail.com</p>
+              </div>
+              <div class="info_flex">
+                <h2>Phone Number</h2>
+                <p>+443434343434</p>
+              </div>
+              <div class="info_flex">
+                <h2>Address</h2>
+                <p>Wah Cantt ,Pakistan</p>
+              </div>
+              <div class="info_flex">
+                <h2>City</h2>
+                <p>Wah Cantt</p>
+              </div>
+              <div class="info_flex">
+                <h2>Country</h2>
+                <p>Pakistan</p>
+              </div>
+              
+              <div class="info_flex">
+                <h2>Date of Birth</h2>
+                <p>01-01-2000</p>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
