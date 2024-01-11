@@ -82,6 +82,11 @@
   width: 18px;
   height: 18px;
 }
+.sidebar_links li a svg {
+  width: 18px;
+  height: 18px;
+  color: white;
+}
 .sidebar_links li a span {
   gap: 15px;
   color: white;
@@ -358,7 +363,7 @@
 .mainbtn:hover {
   background-color: var(--primarybg);
   color: var(--primary);
-  /* border: 1px solid var(--primary); */
+  border: 1px solid var(--primary);
 }
 dialog {
   position: fixed;
@@ -367,7 +372,10 @@ dialog {
   transform: translate(-50%, -50%);
   border: 1px solid var(--primary);
   width: 660px;
+  border-radius: 10px;
+  cursor: default;
 }
+
 ::backdrop {
   backdrop-filter: blur(10px);
 }
@@ -390,11 +398,18 @@ dialog {
 .dialog_header button {
   background-color: var(--primary);
   border: none;
+  padding: 5px 10px;
+}
+.dialog_header button:hover {
+  background-color: var(--primarybg);
 }
 .dialog_header button svg {
   font-size: 16px;
   font-weight: 600;
   color: white;
+}
+.dialog_header button:hover svg {
+  color: var(--primary);
 }
 .dialog_content {
   background-color: #f3fffc;
@@ -416,10 +431,17 @@ dialog {
   justify-content: space-between;
   padding: 10px 20px;
 }
+.date_flex {
+  display: flex;
+  justify-content: flex-start;
+  width: 100%;
+  padding: 10px 20px;
+}
 .input_flex label,
 .checkbox_flex label,
 .addImage_flex label,
-.Message_flex label {
+.Message_flex label,
+.date_flex label {
   font-family: "Poppins", sans-serif;
   font-size: 16px;
   font-weight: 600;
@@ -430,11 +452,17 @@ dialog {
 }
 .input_flex input[type="text"],
 .Message_flex input,
-.Message_flex textarea {
+.Message_flex textarea,
+.input_flex textarea {
   width: 100%;
   padding: 10px;
   border: 1px solid #1b927482;
   border-radius: 5px;
+}
+.date_flex input {
+  border-radius: 5px;
+  padding: 10px;
+  border: 1px solid #1b927482;
 }
 .checkbox_flex {
   padding: 10px 20px;
@@ -579,6 +607,99 @@ dialog {
   width: 100%;
   height: 100%;
 }
+.Blog_card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--primarybg);
+  box-shadow: 0px 4px 12px 0px #00c89c4d;
+  padding: 10px;
+  border-radius: 10px;
+  z-index: 10;
+}
+/* Blogs cards */
+
+.card_img img {
+  width: 100%;
+height: 100%;
+  object-fit: cover;
+}
+.blog_card_content {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 20px;
+  background-color: #fff;
+}
+.close_btn {
+  display: flex;
+  justify-content: end;
+}
+.card_title {
+  font-size: 32px;
+  font-weight: 700;
+  font-family: var(--dashboard_fontfamily);
+  text-transform: uppercase;
+  color: #1d1d1d;
+}
+.card_subtitle {
+  font-size: 24px;
+  font-weight: 600;
+  font-family: var(--dashboard_fontfamily);
+  color: #423b3b;
+}
+.text_flex {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.card_description {
+  font-size: 16px;
+  font-weight: 500;
+  font-family: var(--simplefont);
+  color: #5a5a5a;
+}
+.author_name,
+.blog_date {
+  padding-right: 10px;
+  font-size: 14px;
+  font-weight: 600;
+  font-family: "Poppins", sans-serif;
+  color: var(--primary);
+}
+
+
+.image-container {
+  position: relative;
+  margin: 10px;
+  overflow: hidden;
+}
+
+.img_close-btn {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  background-color: #fff;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  color: #999;
+}
+
+ img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+.uploadimg_div label{
+  font-size: 18px;
+  font-weight: 800;
+  font-family: var(--dashboard_fontfamily);
+  color: var(--primary);
+}
+.uploadimg_div input[type="file"] {
+  display: none;
+}
 /* responsiveness */
 @media screen and (min-width: 320px) {
   .sidebar {
@@ -632,9 +753,11 @@ dialog {
   .active-content {
     display: block;
   }
-  .input_flex {
+  .input_flex,
+  .date_flex {
     flex-direction: column;
     align-items: flex-start;
+    gap: 0;
   }
   .input_flex label,
   .checkbox_flex label,
@@ -650,6 +773,17 @@ dialog {
   }
   .img_sect {
     padding: 20px;
+  }
+  .Blog_card {
+    flex-direction: column;
+  }
+  .card_img,
+  .blog_card_content {
+    width: 100%;
+  }
+
+  .text_flex {
+    flex-direction: column;
   }
 }
 @media screen and (min-width: 768px) {
@@ -707,9 +841,13 @@ dialog {
     flex-direction: row;
   }
 
-  .input_flex {
+  .input_flex,
+  .date_flex {
     flex-direction: row;
     align-items: center;
+  }
+  .date_flex {
+    gap: 80px;
   }
   .input_flex label,
   .checkbox_flex label,
@@ -752,6 +890,18 @@ dialog {
 
   .img_sect {
     padding: 20px 80px;
+  }
+
+  .Blog_card {
+    flex-direction: row;
+  }
+  .card_img,
+  .blog_card_content {
+    width: 50%;
+    height: 100%;
+  }
+  .text_flex {
+    flex-direction: row;
   }
 }
 @media screen and (min-width: 1440px) {

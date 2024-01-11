@@ -86,7 +86,7 @@ nav ul li a,
   font-family: var(--fontfamily);
   cursor: pointer;
 }
-nav ul li  .navbtn {
+nav ul li .navbtn {
   padding: 10px 20px;
   font-size: 16px;
   font-weight: 400;
@@ -96,7 +96,7 @@ nav ul li  .navbtn {
   border: 1px solid var(--primary);
   background-color: transparent;
 }
-nav ul li  .navbtn:hover {
+nav ul li .navbtn:hover {
   background-color: var(--primary);
   color: var(--primarybg);
 }
@@ -162,11 +162,19 @@ nav ul li  .navbtn:hover {
 .dialog_header button {
   background-color: var(--primary);
   border: none;
+  padding: 5px 10px;
+}
+
+.dialog_header button:hover {
+  background-color: var(--primarybg);
 }
 .dialog_header button svg {
   font-size: 16px;
   font-weight: 600;
   color: white;
+}
+.dialog_header button:hover svg {
+  color: var(--primary);
 }
 .dialog_content {
   background-color: #fff;
@@ -272,6 +280,7 @@ nav ul li  .navbtn:hover {
   height: 45px;
   box-sizing: border-box;
   transition: cubic-bezier(0.55, 0.055, 0.675, 0.19) 2s ease-in;
+  cursor: pointer;
 }
 .mainbtn:hover {
   background-color: var(--primarybg);
@@ -505,6 +514,8 @@ nav ul li  .navbtn:hover {
   font-family: var(--fontfamily);
   font-weight: 500;
   padding: 10px 10px;
+  height: 50px;
+  box-sizing: border-box;
 }
 .buttondiv a {
   text-decoration: none;
@@ -514,6 +525,8 @@ nav ul li  .navbtn:hover {
   background-color: var(--primarybg);
   color: var(--primary);
   border: 1px solid var(--primary);
+  height: 50px;
+  box-sizing: border-box;
 }
 
 .buttondiv .simplebtn {
@@ -678,6 +691,8 @@ dialog {
   transform: translate(-50%, -50%);
   border: 1px solid var(--primary);
   width: 500px;
+  border-radius: 10px;
+  cursor: default;
 }
 ::backdrop {
   backdrop-filter: blur(10px);
@@ -1246,6 +1261,10 @@ dialog {
   column-gap: 20px;
   row-gap: 20px;
 }
+.mainCardUpper a{
+  text-decoration: none;
+  color:#1d1d1d
+}
 .card {
   position: relative;
   transition: 1s ease-in-out;
@@ -1279,30 +1298,6 @@ dialog {
   width: 60px;
   height: 60px;
   border-radius: 50%;
-}
-
-.viewButton {
-  background-color: var(--primary);
-  color: white;
-  cursor: pointer;
-  padding: 10px 25px;
-  border: none;
-  border-radius: 10px 10px 0px 10px;
-  height: 45px;
-  box-sizing: border-box;
-}
-.viewButton {
-  text-decoration: none;
-  color:white;
-  font-size: 14px;
-  font-weight: 500;
-  font-family: var(--fontfamily);
-}
-.viewButton a:hover {
-  background-color: var(--primarybg);
-  color: var(--primary);
-  border: 1px solid var(--primary);
-  transition: 0.3s;
 }
 
 .title {
@@ -1760,6 +1755,9 @@ dialog {
   .Campaign_img img {
     width: 100%;
   }
+  .mainCardUpper{
+    flex-direction: column;
+  }
   .cardsection {
     padding: 20px 20px;
   }
@@ -2018,6 +2016,10 @@ dialog {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+  }
+  
+  .mainCardUpper{
+    flex-direction: row;
   }
   .cardsection {
     padding: 40px 30px;
