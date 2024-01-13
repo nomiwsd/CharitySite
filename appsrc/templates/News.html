@@ -4,7 +4,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>DonateNow</title>
     <link
       href="{% static 'fontawesomefree/css/all.min.css' %}"
       rel="stylesheet"
@@ -27,7 +27,7 @@
         </div>
         <div class="main_hero">
           <div class="img_div">
-            <img src="../../static/media/Rectangle 64.png" alt="" />
+            <img src="{% static '/media/Rectangle 64.png' %}" alt="" />
           </div>
           <div class="btnwrap">
             <h2 class="hero_head">Donate Now</h2>
@@ -169,6 +169,6 @@
       </section>
     </main>
     {% include 'components/footer.html'%}
-    <script src="../../static/js/script.js"></script>
+    <script src="{% static 'js/Mainscript.js' %}"></script>
   </body>
 </html>

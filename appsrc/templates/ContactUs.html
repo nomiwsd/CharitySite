@@ -4,7 +4,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Contact Us</title>
     <link
       href="{% static 'fontawesomefree/css/all.min.css' %}"
       rel="stylesheet"
@@ -22,7 +22,7 @@
     <main>
       <section class="contactus">
         <div class="img_div">
-          <img src="../../static/media/pana.png" alt="" />
+          <img src="{% static 'media/pana.png' %}" alt="" />
         </div>
         <div class="contactus_div">
           <div class="padd">
@@ -73,7 +73,7 @@
               </p>
               <div class="mainflex">
                 <div>
-                  <img src="../../static/media/Ellipse 25.png" alt="" />
+                  <img src="{% static 'media/Ellipse 25.png' %}" alt="" />
                 </div>
                 <div class="flex_part">
                   <h4>Bashir Muhammad</h4>
@@ -91,7 +91,7 @@
               </p>
               <div class="mainflex">
                 <div>
-                  <img src="../../static/media/Ellipse 25.png" alt="" />
+                  <img src="{% static 'media/Ellipse 25.png' %}" alt="" />
                 </div>
                 <div class="flex_part">
                   <h4>Bashir Muhammad</h4>
@@ -109,7 +109,7 @@
               </p>
               <div class="mainflex">
                 <div>
-                  <img src="../../static/media/Ellipse 25.png" alt="" />
+                  <img src="{% static 'media/Ellipse 25.png' %}" alt="" />
                 </div>
                 <div class="flex_part">
                   <h4>Bashir Muhammad</h4>
@@ -126,7 +126,6 @@
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>AOS.init();</script>
-
-    <script src="../../static/js/script.js"></script>
+    <script src="{% static 'js/Mainscript.js' %}"></script>
   </body>
 </html>

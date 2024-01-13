@@ -4,7 +4,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Add Programs</title>
     <link
       href="{% static 'fontawesomefree/css/all.min.css' %}"
       rel="stylesheet"
@@ -56,13 +56,13 @@
                   <div class="addImage_flex">
                     <label for="addamount">Add Image</label>
                     <div class="uploadimg_div">
-                      <input type="file" id="upload" multiple>
-                      <label for="upload" class="upload_img_label">Upload Image</label>
-                      
+                      <input type="file" id="upload" multiple />
+                      <label for="upload" class="upload_img_label"
+                        >Upload Image</label
+                      >
+
                       <div id="imageList"></div>
-                 
                     </div>
-                    
                   </div>
                   <div class="addbtndiv">
                     <button class="mainbtn">Add Programs</button>
@@ -74,8 +74,20 @@
           <div class="top_flex">
             <div>
               <div id="navTabs">
-                <button onclick="showTab('activeTab')" id="activeBtn" class="mainbtn">Active</button>
-                <button onclick="showTab('closeTab')" id="closeBtn" class="mainbtn">Close</button>
+                <button
+                  onclick="showTab('activeTab')"
+                  id="activeBtn"
+                  class="mainbtn"
+                >
+                  Active
+                </button>
+                <button
+                  onclick="showTab('closeTab')"
+                  id="closeBtn"
+                  class="mainbtn"
+                >
+                  Close
+                </button>
                 <div id="activeTab" class="tab-content active-content">
                   <div class="mainCardUpper">
                     <div class="card">
@@ -86,8 +98,8 @@
                             <div class="left_sidecontent">
                               <h1>War In Afghanistan</h1>
                               <p>
-                                Lorem Ipsum is simply dummy text of the printing and
-                                text of the printing and typesetting.
+                                Lorem Ipsum is simply dummy text of the printing
+                                and text of the printing and typesetting.
                               </p>
                             </div>
                             <div class="right_sidecontent">
@@ -134,8 +146,8 @@
                             <div class="left_sidecontent">
                               <h1>War In Afghanistan</h1>
                               <p>
-                                Lorem Ipsum is simply dummy text of the printing and
-                                text of the printing and typesetting.
+                                Lorem Ipsum is simply dummy text of the printing
+                                and text of the printing and typesetting.
                               </p>
                             </div>
                             <div class="right_sidecontent">
@@ -176,19 +188,15 @@
                     </div>
                   </div>
                 </div>
-              
-              <div id="closeTab" class="tab-content">
+
+                <div id="closeTab" class="tab-content">
                   <h2>Close Content</h2>
                   <p>This is the content for the Close tab.</p>
+                </div>
               </div>
-              
             </div>
-            </div>
-            
           </div>
-          <div class="add_programs_div">
-            
-          </div>
+          <div class="add_programs_div"></div>
         </div>
       </section>
     </main>
@@ -209,55 +217,60 @@
       });
       function showTab(tabId) {
         // Hide all tab contents
-        var tabContents = document.getElementsByClassName('tab-content');
+        var tabContents = document.getElementsByClassName("tab-content");
         for (var i = 0; i < tabContents.length; i++) {
-            tabContents[i].style.display = 'none';
+          tabContents[i].style.display = "none";
         }
 
         // Show the selected tab content
-        document.getElementById(tabId).style.display = 'block';
+        document.getElementById(tabId).style.display = "block";
 
         // Update button styles based on the selected tab
-        document.getElementById('activeBtn').classList.toggle('active', tabId === 'activeTab');
-        document.getElementById('closeBtn').classList.toggle('active', tabId === 'closeTab');
-    }
+        document
+          .getElementById("activeBtn")
+          .classList.toggle("active", tabId === "activeTab");
+        document
+          .getElementById("closeBtn")
+          .classList.toggle("active", tabId === "closeTab");
+      }
 
-    // Initially show the 'activeTab' content
-    showTab('activeTab');
+      // Initially show the 'activeTab' content
+      showTab("activeTab");
 
+      document
+        .getElementById("upload")
+        .addEventListener("change", handleFileSelect);
 
-    document.getElementById('upload').addEventListener('change', handleFileSelect);
+      function handleFileSelect(event) {
+        const files = event.target.files;
 
-function handleFileSelect(event) {
-    const files = event.target.files;
+        for (let i = 0; i < files.length; i++) {
+          const file = files[i];
 
-    for (let i = 0; i < files.length; i++) {
-        const file = files[i];
+          // Create image container
+          const imageContainer = document.createElement("div");
+          imageContainer.className = "image-container";
 
-        // Create image container
-        const imageContainer = document.createElement('div');
-        imageContainer.className = 'image-container';
-
-        // Create close button
-        const closeButton = document.createElement('button');
-        closeButton.className = 'img_close-btn';
-        closeButton.innerHTML = '&times;';
-        closeButton.addEventListener('click', () => {
+          // Create close button
+          const closeButton = document.createElement("button");
+          closeButton.className = "img_close-btn";
+          closeButton.innerHTML = "&times;";
+          closeButton.addEventListener("click", () => {
             imageContainer.remove();
-        });
+          });
 
-        // Create image element
-        const img = document.createElement('img');
-        img.src = URL.createObjectURL(file);
+          // Create image element
+          const img = document.createElement("img");
+          img.src = URL.createObjectURL(file);
 
-        // Append elements to the container
-        imageContainer.appendChild(closeButton);
-        imageContainer.appendChild(img);
+          // Append elements to the container
+          imageContainer.appendChild(closeButton);
+          imageContainer.appendChild(img);
 
-        // Append container to the image list
-        document.getElementById('imageList').appendChild(imageContainer);
-    }
-}
+          // Append container to the image list
+          document.getElementById("imageList").appendChild(imageContainer);
+        }
+      }
     </script>
   </body>
 </html>

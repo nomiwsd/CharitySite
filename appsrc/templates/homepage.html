@@ -4,7 +4,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Homepage</title>
     <link
       href="{% static 'fontawesomefree/css/all.min.css' %}"
       rel="stylesheet"
@@ -15,6 +15,7 @@
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
 
     <script src="{% static 'fontawesomefree/js/all.min.js' %}"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   </head>
   <body>
     {% include 'components/header.html'%}
@@ -22,14 +23,14 @@
       <section class="landingsection">
         <div class="landingdiv">
           <div class="leftdiv">
-            <div class="innerdiv" >
+            <div class="innerdiv">
               <p class="importanttext">TRUSTED CHARITY COMPANY</p>
               <h1
                 class="mainhead"
                 data-aos="fade-right"
                 data-aos-offset="300"
                 data-aos-easing="ease-in-sine"
-                >
+              >
                 Let’s Help And Make People Smile By <span>Giving</span> Of Yours
               </h1>
               <p class="simpletext">
@@ -42,10 +43,10 @@
           <div class="rightdiv">
             <div class="hero_maincard">
               <div class="bgbox bgbox1"></div>
-              <div class="Hero_card ">
-                <div class="hero_icon_div charity_icon">
+              <div class="Hero_card">
+                <div class="icon_div charity_icon">
                   <img
-                    src="../../static/media/charity.png"
+                    src="{% static 'media/charity.png' %}"
                     class="icons"
                     alt="Charity Icon"
                   />
@@ -53,10 +54,12 @@
                 <div class="content">
                   <button class="mainbtn">Education</button>
                   <div class="textdiv">
-                    <h1 class="mainhead_2" 
-                    data-aos="fade-up-left"
-                    data-aos-offset="200"
-                    data-aos-easing="ease-in-sine">
+                    <h1
+                      class="mainhead_2"
+                      data-aos="fade-up-left"
+                      data-aos-offset="200"
+                      data-aos-easing="ease-in-sine"
+                    >
                       Help Children Get out of Poverty & have a Future
                     </h1>
                     <p class="simpletext">
@@ -80,7 +83,7 @@
                       <i class="fa-brands fa-apple"></i>Pay
                     </button>
                     <button class="paybtn">
-                      <img src="../../static/media/google.png" alt="" /> Pay
+                      <img src="{% static 'media/google.png'%}" alt="" /> Pay
                     </button>
                   </div>
                 </div>
@@ -96,28 +99,30 @@
         <div class="left_div">
           <div class="icon_div solids_icon">
             <img
-              src="../../static/media/solidarity.png"
+              src="{% static 'media/solid.png'%}"
               alt="Solidarity Icon"
               class="iconimg"
             />
           </div>
           <div class="over_lay">
             <img
-              src="../../static/media/1.png"
+              src="{% static 'media/1.png' %}"
               alt="Childern Image"
               class="bgimg"
             />
             <div class="frontimg">
-              <img src="../../static/media/2.png" alt="Childern Image" />
+              <img src="{% static 'media/2.png' %}" alt="Childern Image" />
             </div>
           </div>
         </div>
         <div class="right_div">
           <p class="importanttext">Who we are</p>
-          <h1 class="mainhead_3" 
-          data-aos="fade-down"
-          data-aos-offset="300"
-          data-aos-easing="ease-in-sine">
+          <h1
+            class="mainhead_3"
+            data-aos="fade-down"
+            data-aos-offset="300"
+            data-aos-easing="ease-in-sine"
+          >
             We’re Non-Profit Charity & NGO Organization
           </h1>
           <hr class="hrline" />
@@ -157,9 +162,13 @@
           </h1>
         </div>
         <div class="cardsdiv">
-          <div class="cardcampaign" data-aos="zoom-in-right" data-aos-offset="150"
-          data-aos-easing="ease-in-sine">
-            <img src="../../static/media/Rectangle 390 (2).png" alt="" />
+          <div
+            class="cardcampaign"
+            data-aos="zoom-in-right"
+            data-aos-offset="150"
+            data-aos-easing="ease-in-sine"
+          >
+            <img src="{% static 'media/Rectangle 390 (2).png' %}" alt="" />
             <p class="cardtext">
               Fundraising for children and refugees from *******
             </p>
@@ -179,9 +188,13 @@
               </div>
             </div>
           </div>
-          <div class="cardcampaign" data-aos="zoom-in-right" data-aos-offset="150"
-          data-aos-easing="ease-in-sine">
-            <img src="../../static/media/Rectangle 390 (1).png" alt="" />
+          <div
+            class="cardcampaign"
+            data-aos="zoom-in-right"
+            data-aos-offset="150"
+            data-aos-easing="ease-in-sine"
+          >
+            <img src="{% static 'media/Rectangle 390 (1).png' %}" alt="" />
             <p class="cardtext">
               Food, water and medicine for shelter on the ******
             </p>
@@ -201,9 +214,13 @@
               </div>
             </div>
           </div>
-          <div class="cardcampaign" data-aos="zoom-in-right" data-aos-offset="150"
-          data-aos-easing="ease-in-sine">
-            <img src="../../static/media/Rectangle 390.png" alt="" />
+          <div
+            class="cardcampaign"
+            data-aos="zoom-in-right"
+            data-aos-offset="150"
+            data-aos-easing="ease-in-sine"
+          >
+            <img src="{% static 'media/Rectangle 390.png' %}" alt="" />
             <p class="cardtext">
               massive invasion of Palestine, war in the Gaza
             </p>
@@ -238,7 +255,7 @@
           <div class="cardnews">
             <div class="newsimgdiv">
               <button>WATER</button>
-              <img src="../../static/media/Bitmap (2).png" alt="" />
+              <img src="{% static 'media/Bitmap (2).png'%}" alt="" />
             </div>
             <div class="textnewsdiv">
               <h2>Bring together people who care about a cause</h2>
@@ -251,7 +268,7 @@
           <div class="cardnews">
             <div class="newsimgdiv">
               <button>WATER</button>
-              <img src="../../static/media/Bitmap (1).png" alt="" />
+              <img src="{% static 'media/Bitmap (1).png' %}" alt="" />
             </div>
             <div class="textnewsdiv">
               <h2>Bring together people who care about a cause</h2>
@@ -264,7 +281,7 @@
           <div class="cardnews">
             <div class="newsimgdiv">
               <button>WATER</button>
-              <img src="../../static/media/Bitmap.png" alt="" />
+              <img src="{% static 'media/Bitmap.png' %}" alt="" />
             </div>
             <div class="textnewsdiv">
               <h2>Bring together people who care about a cause</h2>
@@ -286,7 +303,7 @@
           </div>
           <dialog id="myDialog" class="dialog_box">
             <div class="subscribe_dialog_content">
-              <img src="../../static/media/Group458.png" alt="">
+              <img src="{% static 'media/Group458.png' %}" alt="" />
               <h1>You have Successfully Subscribed</h1>
               <button class="close-button mainbtn">Close</button>
             </div>
@@ -300,13 +317,17 @@
         <div class="testimonialmaindiv">
           <div class="testimonialimgdiv">
             <div class="Main-Bg">
-              <img src="../../static/media/Layer2.png" alt="" />
+              <img src="{% static 'media/Layer2.png' %}" alt="" />
             </div>
           </div>
           <div class="testimonialtextdiv">
             <p class="importanttext">Testimonials</p>
-            <h1 class="mainhead_3" data-aos="fade-down-left" data-aos-offset="250"
-            data-aos-easing="ease-in-out">
+            <h1
+              class="mainhead_3"
+              data-aos="fade-down-left"
+              data-aos-offset="250"
+              data-aos-easing="ease-in-out"
+            >
               What People Say about <br />
               <span>Our Organization</span>
             </h1>
@@ -330,8 +351,12 @@
         <div class="upperdiv">
           <div class="innerdiv">
             <p class="importanttext">Act Now for a Better World</p>
-            <h1 class="mainhead_3" data-aos="fade-left" data-aos-offset="200"
-            data-aos-easing="ease-in-out">
+            <h1
+              class="mainhead_3"
+              data-aos="fade-left"
+              data-aos-offset="200"
+              data-aos-easing="ease-in-out"
+            >
               Solutions to Help People in Need <br />
               and Save the Planet
             </h1>
@@ -464,10 +489,9 @@
     </main>
 
     {% include 'components/footer.html'%}
-
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script>AOS.init();</script>
-    <script src="../../static/js/script.js"></script>
-
+    <script>
+      AOS.init();
+    </script>
+    <script src="{% static 'js/Mainscript.js' %}"></script>
   </body>
 </html>

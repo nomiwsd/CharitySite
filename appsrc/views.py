@@ -7,6 +7,10 @@ def ourcampaign(request):
     return render(request,'OurCampaign.html')
 def news(request):
     return render(request,'News.html')
+def blogdetail(request):
+    return render(request,'BlogDetail.html')
+def blogsinglepage(request):
+    return render(request,'BlogSinglePage.html')
 def contactus(request):
     return render(request,'Contactus.html')
 def donatenow(request):

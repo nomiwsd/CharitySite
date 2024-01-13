@@ -1,0 +1,161 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blogs</title>
+    <link
+      href="{% static 'fontawesomefree/css/all.min.css' %}"
+      rel="stylesheet"
+      type="text/css"
+    />
+
+    <link rel="stylesheet" href="{% static '/css/index.css' %}" />
+    <link rel="stylesheet" href="{% static '/css/news.css' %}" />
+
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
+    <!-- One file includes all the Font Awesome Free icons and utilities -->
+    <script src="{% static 'fontawesomefree/js/all.min.js' %}"></script>
+  </head>
+  <body>
+    {% include 'components/header.html'%}
+
+    <section class="blog_bg blog_main">
+      <div class="blog_bg_inner">
+        <div class="left_empty"></div>
+        <div class="blog_main_card">
+          <div class="bgbox bgbox1"></div>
+          <div class="blog_card">
+            <div class="blog_content">
+              <p class="main_para">March 16, 2024 | Nattasha</p>
+              <h2 class="main_blog_head">
+                Why Giving Is Important | Five Reasons to Donate
+              </h2>
+              <p class="small_text">
+                There are many variations of passages of Lorem Ipsum available,
+                but the majority have suffered.
+              </p>
+              <div class="blog_cardbtn">
+                <a href="{% url 'blogsinglepage' %}"
+                  ><button class="readmorebtn">Read More</button></a
+                >
+              </div>
+            </div>
+          </div>
+          <div class="bgbox bgbox2"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="blogs_cards_sect">
+      <div class="right_img"></div>
+      <div class="left_img"></div>
+      <div class="blog_main_wrapper">
+        <div class="blogs_card">
+          <div class="blog_img_div">
+            <img src="{% static '/media/cardimg1.png' %}" alt="" />
+          </div>
+          <div class="blog_content_div">
+            <p class="main_para">August 18, 2024 | Minciya</p>
+            <h2 class="main_blog_head">
+              We’ve reached 1 million in donations and counting
+            </h2>
+            <p class="small_text">
+              There are many variations of passages of Lorem Ipsum available,
+              but the majority have suffered altera in some form, by injected
+              randomised words.
+            </p>
+            <div class="blog_cardbtn">
+                <a href="{% url 'blogsinglepage' %}" ><button class="mainbtn">Read More</button></a>
+            </div>
+          </div>
+        </div>
+        <div class="blogs_card">
+          <div class="blog_img_div">
+            <img src="{% static '/media/cardimg2.png' %}" alt="" />
+          </div>
+          <div class="blog_content_div">
+            <p class="main_para">August 18, 2024 | Minciya</p>
+            <h2 class="main_blog_head">
+              why were going to alaska and why you should too
+            </h2>
+            <p class="small_text">
+              There are many variations of passages of Lorem Ipsum available,
+              but the majority have suffered altera in some form, by injected
+              randomised words.
+            </p>
+            <div class="blog_cardbtn">
+                <a href="{% url 'blogsinglepage' %}" ><button class="mainbtn">Read More</button></a>
+            </div>
+          </div>
+        </div>
+        <div class="blogs_card">
+          <div class="blog_img_div">
+            <img src="{% static '/media/cardimg3.png' %}" alt="" />
+          </div>
+          <div class="blog_content_div">
+            <p class="main_para">March 16, 2024 | Nattasha</p>
+            <h2 class="main_blog_head">
+              San Francisco is officially the first city to ban plastic bottles
+            </h2>
+            <p class="small_text">
+              There are many variations of passages of Lorem Ipsum available,
+              but the majority have suffered altera in some form, by injected
+              randomised words.
+            </p>
+            <div class="blog_cardbtn">
+                <a href="{% url 'blogsinglepage' %}" ><button class="mainbtn">Read More</button></a>
+            </div>
+          </div>
+        </div>
+        <div class="blogs_card">
+          <div class="blog_img_div">
+            <img src="{% static '/media/cardimg4.png' %}" alt="" />
+          </div>
+          <div class="blog_content_div">
+            <p class="main_para">March 16, 2024 | Nattasha</p>
+            <h2 class="main_blog_head">
+              We’ve reached 1 million in donations and counting
+            </h2>
+            <p class="small_text">
+              There are many variations of passages of Lorem Ipsum available,
+              but the majority have suffered altera in some form, by injected
+              randomised words.
+            </p>
+            <div class="blog_cardbtn">
+                <a href="{% url 'blogsinglepage' %}" ><button class="mainbtn">Read More</button></a>
+            </div>
+          </div>
+        </div>
+        <div class="blogs_card">
+          <div class="blog_img_div">
+            <img src="{% static '/media/cardimg5.png' %}" alt="" />
+          </div>
+          <div class="blog_content_div">
+            <p class="main_para">March 16, 2024 | Nattasha</p>
+            <h2 class="main_blog_head">
+              Costa Rica is the surprising foodie haven you need to know about
+            </h2>
+            <p class="small_text">
+              There are many variations of passages of Lorem Ipsum available,
+              but the majority have suffered altera in some form, by injected
+              randomised words.
+            </p>
+            <div class="blog_cardbtn">
+                <a href="{% url 'blogsinglepage' %}" ><button class="mainbtn">Read More</button></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    {% include 'components/footer.html'%}
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+<script src="{% static 'js/Mainscript.js' %}"></script>
+  </body>
+</html>

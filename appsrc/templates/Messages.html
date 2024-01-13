@@ -4,7 +4,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Messages</title>
     <link
       href="{% static 'fontawesomefree/css/all.min.css' %}"
       rel="stylesheet"
@@ -34,7 +34,7 @@
                 <td class="br-right">#324145</td>
                 <td class="br-right">John Smith</td>
                 <td class="br-right">smith33@Gmail.com</td>
-                <td class="br-right ">
+                <td class="br-right">
                   <p class="message_text">
                     Lorem ipsum dolor sit amet consectetur. Neque ut montes
                     lorem ullamcorper pharetra et. Quam viverra sit in pretium
@@ -46,31 +46,35 @@
                   <button id="View_Btn" class="view_btn">View</button>
                   <dialog id="View_Dialog" class="dialog_box">
                     <div class="dialog_header">
-                        <h1>View Message</h1>
-                        <button class="close-button">
-                            <i class="fa-solid fa-close"></i>
-                        </button>
+                      <h1>View Message</h1>
+                      <button class="close-button">
+                        <i class="fa-solid fa-close"></i>
+                      </button>
                     </div>
                     <div class="Message_dialog_content">
                       <div class="Message_flex">
                         <label for="idno">ID Number</label>
-                        <input type="text" name="idno" value="#324145">
+                        <input type="text" name="idno" value="#324145" />
                       </div>
                       <div class="Message_flex">
                         <label for="Name">Name</label>
-                        <input type="text" name="Name" value="John Smith">
+                        <input type="text" name="Name" value="John Smith" />
                       </div>
                       <div class="Message_flex">
-                        <label for="Email">
-                            Email
-                        </label>
-                        <input type="email" name="Email" value="smith33@Gmail.com">
+                        <label for="Email"> Email </label>
+                        <input
+                          type="email"
+                          name="Email"
+                          value="smith33@Gmail.com"
+                        />
                       </div>
                       <div class="Message_flex">
                         <label for="Message">Message</label>
-                        <textarea name="Message" cols="30" rows="10" > Lorem ipsum dolor sit amet consectetur. Neque ut montes lorem ullamcorper pharetra et. Quam viverra sit in pretium quam. Consectetur posuere porta nam feugiat mauris ornare sapien Lorem ipsum dolor sit amet consectetur. Neque ut montes lorem ullamcorper pharetra et. Quam viverra sit in pretium quam. Consectetur posuere porta nam feugiat mauris ornare sapien </textarea>
+                        <textarea name="Message" cols="30" rows="10">
+ Lorem ipsum dolor sit amet consectetur. Neque ut montes lorem ullamcorper pharetra et. Quam viverra sit in pretium quam. Consectetur posuere porta nam feugiat mauris ornare sapien Lorem ipsum dolor sit amet consectetur. Neque ut montes lorem ullamcorper pharetra et. Quam viverra sit in pretium quam. Consectetur posuere porta nam feugiat mauris ornare sapien </textarea
+                        >
                       </div>
-                      
+
                       <div class="addbtndiv">
                         <button class="mainbtn">Reply</button>
                       </div>
@@ -85,16 +89,16 @@
       </section>
     </main>
     <script>
-const button = document.getElementById("View_Btn");
-const dialogbox = document.getElementById("View_Dialog");
+      const button = document.getElementById("View_Btn");
+      const dialogbox = document.getElementById("View_Dialog");
 
-button.addEventListener("click", () => {
-  dialogbox.showModal();
-});
+      button.addEventListener("click", () => {
+        dialogbox.showModal();
+      });
 
-dialogbox.querySelector(".close-button").addEventListener("click", () => {
-  dialogbox.close();
-});
-</script>
+      dialogbox.querySelector(".close-button").addEventListener("click", () => {
+        dialogbox.close();
+      });
+    </script>
   </body>
 </html>

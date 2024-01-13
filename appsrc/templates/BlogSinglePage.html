@@ -1,0 +1,122 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BlogSinglePage</title>
+    <link
+      href="{% static 'fontawesomefree/css/all.min.css' %}"
+      rel="stylesheet"
+      type="text/css"
+    />
+
+    <link rel="stylesheet" href="{% static '/css/index.css' %}" />
+    <link rel="stylesheet" href="{% static '/css/news.css' %}" />
+
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <!-- One file includes all the Font Awesome Free icons and utilities -->
+    <script src="{% static 'fontawesomefree/js/all.min.js' %}"></script>
+  </head>
+  <body>
+    {% include 'components/header.html'%}
+
+    <section class="blog_single_bg blog_bg">
+      <div class="single_blog_bg_inner">
+        <div class="single_blog_main_card">
+          <div class="bgbox bgbox1"></div>
+          <div class="single_blog_card">
+            <div class="blog_content">
+              <p class="main_para">March 16, 2024 | Nattasha</p>
+              <h2 class="main_blog_head">
+                Why Giving Is Important | Five Reasons to Donate
+              </h2>
+              <p class="small_text">
+                We’ve reached 1 million in donations & counting
+              </p>
+              <div>
+                <button class="readmorebtn">Read More</button>
+              </div>
+            </div>
+          </div>
+          <div class="bgbox bgbox2"></div>
+        </div>
+      </div>
+    </section>
+    <section class="text-sect">
+      <div class="single_text_content">
+        <p class="first_para">
+          Uniquely matrix economically sound value through cooperative
+          technology. Competently parallel task fully researched data and
+          enterprise process improvements. Collaboratively expedite quality
+          manufactured products via client-focused results quickly communicate
+          enabled technology and turnkey leadership skills. Uniquely enable
+          accurate supply chains rather than friction technology.
+        </p>
+        <div class="head_Sect">
+          <h1>We Need Your Help</h1>
+          <p>
+            Veniam quae. Nostrum facere repellendus minus quod aut aliquam neque
+            reiciendis. Qui beatae vel magnam repudiandae ipsum repellat
+            repudiandae. Voluptate at dolores dolor sint occaecati similique.
+            Velit eius ab delectus temporibus.
+          </p>
+          <ul>
+            <li>
+              Neque sodales ut etiam sit amet nisl purus non tellus orci ac
+              auctor.
+            </li>
+            <li>
+              Nostrum facere repellendus minus quod aut aliquam neque
+              reiciendis.
+            </li>
+            <li>
+              A rich text element can be used with static or dynamic content.
+            </li>
+          </ul>
+        </div>
+
+        <div class="single_img_div">
+          <img src="{% static 'media/Rectangle 390 (1).png'%}" alt="" />
+        </div>
+        <div class="head_Sect">
+          <h4>Donate your time and skills</h4>
+          <p>
+            Veniam quae. Nostrum facere repellendus minus quod aut aliquam neque
+            reiciendis. Qui beatae vel magnam repudiandae ipsum repellat
+            repudiandae. Voluptate at dolores ut dolo sint occaecati similique.
+            Velit eius ab delectus temporibus.
+          </p>
+          <ol>
+            <li>Efficiently myocardinate market-driven innovation.</li>
+            <li>Idea-sharing with back end products.</li>
+            <li>Ballpark value added activity to beta test.</li>
+            <li>Voluptate at dolores ut dolor</li>
+          </ol>
+        </div>
+        <div class="avatar_div">
+          <div class="avatar_area">
+            <img src="{% static 'media/profileimg.png'%}" alt="" />
+          </div>
+          <div class="flex_area">
+           <div class="top_area">
+            <h1>Cincinatty</h1>
+            <p>Donator</p>
+           </div> 
+           <div class="below_area">
+            <p>Centuries but also leapintelectronitype
+              setting,established fact that a reader will bdistracted content.beatae vel magnam repudiandae repudiandae.  </p>
+           </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    {% include 'components/footer.html'%}
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+<script src="{% static 'js/Mainscript.js' %}"></script>
+  </body>
+</html>

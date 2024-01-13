@@ -258,7 +258,7 @@ nav ul li .navbtn:hover {
   z-index: 10;
   padding: 20px 20px;
 }
-.hero_icon_div {
+.icon_div {
   background-color: var(--primary);
   display: flex;
   justify-content: center;

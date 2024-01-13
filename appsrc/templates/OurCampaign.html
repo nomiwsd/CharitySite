@@ -4,7 +4,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Our Campaign</title>
     <link
       href="{% static 'fontawesomefree/css/all.min.css' %}"
       rel="stylesheet"
@@ -32,7 +32,7 @@
           </h1>
         </div>
         <div class="Campaign_img">
-          <img src="../../static/media/bro.svg" alt="" />
+          <img src="{% static '/media/bro.svg' %}" alt="" />
         </div>
       </section>
       <section class="cardsection">
@@ -220,12 +220,12 @@
           <div class="main_innerdiv">
             <div class="inner_div"></div>
             <img
-              src="../../static/media/Group385.png"
+              src="{% static 'media/Group385.png' %}"
               alt="loading"
               class="upperimg"
             />
             <img
-              src="../../static/media/Group384.png"
+              src="{% static 'media/Group384.png' %}"
               alt="loading"
               class="lowerimg"
             />
@@ -271,6 +271,6 @@
       AOS.init();
     </script>
 
-    <script src="../../static/js/script.js"></script>
+    <script src="{% static 'js/Mainscript.js' %}"></script>
   </body>
 </html>
